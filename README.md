@@ -96,4 +96,12 @@ C項4条にもあるとおり，競技用の装置であるということがひ
   
 この競技を通して参加者のコードを読む力や回路の能力が向上することを期待しています．  
 今後は競技規則と運営規則を詰めていくとともに競技用装置のキット化を目指しています．  
+
+
+## Author 
+2020 10.31  
+Takana Norimasa  
+homepage: [https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)  
+github  : [https://github.com/Takana-Norimasa](https://github.com/Takana-Norimasa/)  
+Twitter : [https://twitter.com/303_See_0ther](https://twitter.com/303_See_0ther)  
   
