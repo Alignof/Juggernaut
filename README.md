@@ -103,5 +103,5 @@ C項4条にもあるとおり，競技用の装置であるということがひ
 Takana Norimasa  
 homepage: [https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)  
 github  : [https://github.com/Takana-Norimasa](https://github.com/Takana-Norimasa/)  
-Twitter : [https://twitter.com/303_See_0ther](https://twitter.com/303_See_0ther)  
+Twitter : [https://twitter.com/\_Alignof](https://twitter.com/_Alignof)  
   
