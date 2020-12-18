@@ -12,10 +12,14 @@
 #define SER         27
 #define RCLK        26
 #define SRCLK       25
+#define BUZZER      23
 #define DATASIZE    16
 
 // giver pin assgin
-const uint8_t GRAY_BUTTON = 23;
+const uint8_t NAVY_BUTTON  = 18;
+const uint8_t WHITE_BUTTON = 19;
+const uint8_t RED_BUTTON   = 21;
+const uint8_t BLUE_BUTTON  = 22;
 
 typedef enum{
 	RED,
@@ -23,16 +27,35 @@ typedef enum{
 	GREEN,
 }SIGNAL;
 
+int time_limit = 150;
 EventGroupHandle_t eg_handle;
 bool timer_stop = false;
 SIGNAL signal   = YELLOW;
 
 void gaming(void *pvParameters){
+	bool flag1 = false;
+	bool flag2 = false;
+	bool flag3 = false;
+	bool flag4 = false;
 	while(1){
 		delay(1);
-		if(digitalRead(GRAY_BUTTON) == LOW){
+		flag1 = (digitalRead(NAVY_BUTTON)  == LOW);
+		flag2 = (digitalRead(WHITE_BUTTON) == HIGH);
+		flag3 = (digitalRead(BLUE_BUTTON)  == LOW);
+		flag4 = (digitalRead(RED_BUTTON)   == HIGH);
+		
+		// succeeded
+		if(flag1 && flag2 && flag3){
 			signal     = GREEN;
 			timer_stop = true;
+			while(1) delay(1e5);
+		}
+
+		// failed
+		if(!flag4){
+			signal     = RED;
+			timer_stop = true;
+			digitalWrite(BUZZER, HIGH);
 			while(1) delay(1e5);
 		}
 	}
@@ -40,7 +63,6 @@ void gaming(void *pvParameters){
 
 void display(void *pvParameters){
 	int ms;
-	int time_limit = 30;
 	long long i,j;
 	long long start;
 	long long minits,second;
@@ -57,6 +79,9 @@ void display(void *pvParameters){
 				minits = time_limit/60;
 				second = time_limit%60;
 				start  = millis();
+				digitalWrite(BUZZER, HIGH);
+			}else{
+				digitalWrite(BUZZER, LOW);
 			}
 		}
 
@@ -69,6 +94,7 @@ void display(void *pvParameters){
 
 	// time over
 	signal = RED;
+	digitalWrite(BUZZER, HIGH);
 	while(1){
 		data_send(5, 10, signal);
 		for(int i=1;i<=4;i++){
@@ -82,12 +108,16 @@ void setup(){
 	Serial.begin(115200); 
 	eg_handle=xEventGroupCreate();
 
-	pinMode(SER,   OUTPUT);
-	pinMode(RCLK,  OUTPUT);
-	pinMode(SRCLK, OUTPUT);
+	pinMode(SER,    OUTPUT);
+	pinMode(RCLK,   OUTPUT);
+	pinMode(SRCLK,  OUTPUT);
+	pinMode(BUZZER, OUTPUT);
 
 	// === declared by giver ===
-	pinMode(GRAY_BUTTON, INPUT_PULLUP);
+	pinMode(NAVY_BUTTON,  INPUT_PULLUP);
+	pinMode(WHITE_BUTTON, INPUT_PULLUP);
+	pinMode(RED_BUTTON,   INPUT_PULLUP);
+	pinMode(BLUE_BUTTON,  INPUT_PULLUP);
 	// =====================
 
 	xTaskCreatePinnedToCore(gaming,  "gaming",  8192, NULL, 1, NULL, 1);
