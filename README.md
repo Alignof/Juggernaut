@@ -100,7 +100,7 @@ C項4条にもあるとおり，競技用の装置であるということがひ
 ## Author 
 2020 10.31  
 Takana Norimasa  
-homepage: [https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)  
-github  : [https://github.com/Takana-Norimasa](https://github.com/Takana-Norimasa/)  
+homepage: [https://alignof.github.io/](https://alignof.github.io/)  
+github  : [https://github.com/Alignof/](https://github.com/Alignof/)  
 Twitter : [https://twitter.com/\_Alignof](https://twitter.com/_Alignof)  
   
