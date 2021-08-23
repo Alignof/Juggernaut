@@ -1,9 +1,9 @@
 /*
  * @date		2020 10/31-
- * @development name	Juggernaut
- * @author		Takana Norimasa <j17423@kisarazu.kosen-ac.jp>
+ * @code name	Juggernaut
+ * @author		Takana Norimasa <Alignof@outlook.com>
  * @brief		Educational bomb disposal game
- * @repository		https://github.com/Takana-Norimasa/Juggernaut
+ * @repository	https://github.com/Takana-Norimasa/Juggernaut
  */ 
 
 #include "freertos/task.h"
@@ -21,23 +21,23 @@ const uint8_t WHITE_BUTTON = 19;
 const uint8_t RED_BUTTON   = 21;
 const uint8_t BLUE_BUTTON  = 22;
 
-typedef enum{
+typedef enum {
 	RED,
 	YELLOW,
 	GREEN,
-}SIGNAL;
+} SIGNAL;
 
 int time_limit = 150;
-EventGroupHandle_t eg_handle;
 bool timer_stop = false;
 SIGNAL signal   = YELLOW;
+EventGroupHandle_t eg_handle;
 
-void gaming(void *pvParameters){
+void gaming(void *pvParameters) {
 	bool flag1 = false;
 	bool flag2 = false;
 	bool flag3 = false;
 	bool flag4 = false;
-	while(1){
+	while(1) {
 		delay(1);
 		flag1 = (digitalRead(NAVY_BUTTON)  == LOW);
 		flag2 = (digitalRead(WHITE_BUTTON) == HIGH);
@@ -45,14 +45,14 @@ void gaming(void *pvParameters){
 		flag4 = (digitalRead(RED_BUTTON)   == HIGH);
 		
 		// succeeded
-		if(flag1 && flag2 && flag3){
+		if(flag1 && flag2 && flag3) {
 			signal     = GREEN;
 			timer_stop = true;
 			while(1) delay(1e5);
 		}
 
 		// failed
-		if(!flag4){
+		if(!flag4) {
 			signal     = RED;
 			timer_stop = true;
 			digitalWrite(BUZZER, HIGH);
@@ -61,7 +61,7 @@ void gaming(void *pvParameters){
 	}
 }
 
-void display(void *pvParameters){
+void display(void *pvParameters) {
 	int ms;
 	long long i,j;
 	long long start;
@@ -71,10 +71,10 @@ void display(void *pvParameters){
 	second = time_limit%60;
 	minits = time_limit/60;
 
-	while(time_limit > 0){
-		if(!(timer_stop)){
+	while(time_limit > 0) {
+		if(!(timer_stop)) {
 			ms = millis()-start;
-			if(ms>1000){
+			if(ms>1000) {
 				time_limit--;
 				minits = time_limit/60;
 				second = time_limit%60;
@@ -95,16 +95,17 @@ void display(void *pvParameters){
 	// time over
 	signal = RED;
 	digitalWrite(BUZZER, HIGH);
-	while(1){
+	while(1) {
 		data_send(5, 10, signal);
-		for(int i=1;i<=4;i++){
+		for(int i=1;i<=4;i++) {
 			data_send(i, 0, signal);
 		}
 	}
 }
 
-void loop(){delay(1e5);}
-void setup(){
+void loop() { delay(1e5); }
+
+void setup() {
 	Serial.begin(115200); 
 	eg_handle=xEventGroupCreate();
 
@@ -125,10 +126,10 @@ void setup(){
 	delay(100);
 }
 
-void data_send(int digit, int num, SIGNAL rgb){
+void data_send(int digit, int num, SIGNAL rgb) {
 	int i;
 	uint16_t data;
-	int seg[11] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x03};
+	int seg[11] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x03};
 
 	/*
 	 *                QH <--------- QA
@@ -137,13 +138,13 @@ void data_send(int digit, int num, SIGNAL rgb){
 	 */
 	data = (1<<(digit+10))+(1<<(rgb+8))+(seg[num]);
 
-	Serial.println(data,BIN);
-	digitalWrite(RCLK,LOW);
-	for(i = 0;i < DATASIZE;i++){
-		digitalWrite(SER,(data>>i)&1);
-		digitalWrite(SRCLK,LOW);
-		digitalWrite(SRCLK,HIGH);
+	Serial.println(data, BIN);
+	digitalWrite(RCLK, LOW);
+	for(i = 0;i < DATASIZE;i++) {
+		digitalWrite(SER, (data>>i)&1);
+		digitalWrite(SRCLK, LOW);
+		digitalWrite(SRCLK, HIGH);
 	}
-	digitalWrite(RCLK,HIGH);
+	digitalWrite(RCLK, HIGH);
 }
 
