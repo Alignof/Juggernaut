@@ -9,11 +9,11 @@
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 
-#define SER         27
-#define RCLK        26
-#define SRCLK       25
-#define BUZZER      23
-#define DATASIZE    16
+#define SER      27
+#define RCLK     26
+#define SRCLK    25
+#define BUZZER   23
+#define DATASIZE 16
 
 // giver pin assgin
 const uint8_t NAVY_BUTTON  = 18;
@@ -29,7 +29,7 @@ typedef enum {
 
 int time_limit = 150;
 bool timer_stop = false;
-SIGNAL signal   = YELLOW;
+SIGNAL signal = YELLOW;
 EventGroupHandle_t eg_handle;
 
 void gaming(void *pvParameters) {
@@ -53,7 +53,7 @@ void gaming(void *pvParameters) {
 
 		// failed
 		if(!flag4) {
-			signal     = RED;
+			signal = RED;
 			timer_stop = true;
 			digitalWrite(BUZZER, HIGH);
 			while(1) delay(1e5);
