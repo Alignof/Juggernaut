@@ -106,7 +106,6 @@ void display(void *pvParameters) {
 void loop() { delay(1e5); }
 
 void setup() {
-	Serial.begin(115200); 
 	eg_handle=xEventGroupCreate();
 
 	pinMode(SER,    OUTPUT);
