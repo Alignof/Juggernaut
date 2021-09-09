@@ -12,7 +12,7 @@
 #define SER      27
 #define RCLK     26
 #define SRCLK    25
-#define BUZZER   23
+#define BUZZER   14
 #define DATASIZE 16
 
 // giver pin assgin
@@ -106,7 +106,6 @@ void display(void *pvParameters) {
 void loop() { delay(1e5); }
 
 void setup() {
-	Serial.begin(115200); 
 	eg_handle=xEventGroupCreate();
 
 	pinMode(SER,    OUTPUT);
