@@ -3,7 +3,11 @@
 Juggernautは時限爆弾型のタイマーの構造を，与えられた回路図とプログラムから推測し規定内の操作を行うことでタイマーを停止させる（解除する）競技です．    
 作問者には回路構成力とプログラムを柔軟に書く力が，解除する側には回路図やデータシートを読む力とプログラムを素早く間違いなく解読する力が求められ，教育面での効果が期待できます．    
 解除するまでの時間を競う競技型や，お互いに装置を作って解除しあってワイワイするイベント型を想定しています．    
-  
+
+## お知らせ（2021 9/9 追記）
+SECCONのイベントでJuggernautに関する企画を2021年10月16日(土)に開催します！
+詳しくは[こちら](https://www.seccon.jp/2021/seccon_contest/secconcon.html)をチェック！
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨年 SECCON Contest of Contest で発表した新競技，&quot;Juggernaut&quot; に関するイベントを SECCONCON で開催することになりました！<br>皆さん奮ってご参加ください！！！<a href="https://twitter.com/hashtag/seccon?src=hash&amp;ref_src=twsrc%5Etfw">#seccon</a> <a href="https://twitter.com/hashtag/secconcon?src=hash&amp;ref_src=twsrc%5Etfw">#secconcon</a> <a href="https://t.co/xjxaSdYjua">https://t.co/xjxaSdYjua</a></p>&mdash; and rsp,-0x10 (@_Alignof) <a href="https://twitter.com/_Alignof/status/1435884330769739778?ref_src=twsrc%5Etfw">September 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   
 ## 競技の流れ  
 1. 運営によるルールの決定と通知（1週間ほど前）  
