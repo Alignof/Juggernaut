@@ -85,9 +85,9 @@ void display(void *pvParameters) {
 			}
 		}
 
-		data_send(5, 10,	     signal);
 		data_send(4, (minits/10)%10, signal);
 		data_send(3, minits%10,	     signal);
+		data_send(5, 10, signal);
 		data_send(2, (second/10)%10, signal);
 		data_send(1, second%10,      signal);
 	}
@@ -145,5 +145,6 @@ void data_send(int digit, int num, SIGNAL rgb) {
 		digitalWrite(SRCLK, HIGH);
 	}
 	digitalWrite(RCLK, HIGH);
+    delay(1);
 }
 
