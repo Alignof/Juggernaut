@@ -36,17 +36,6 @@ F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/CA56-12SURKWA(
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Buzzer BZ?
-U 1 1 6126BBFF
-P 3550 6150
-F 0 "BZ?" H 3702 6179 50  0000 L CNN
-F 1 "Buzzer" H 3702 6088 50  0000 L CNN
-F 2 "" V 3525 6250 50  0001 C CNN
-F 3 "~" V 3525 6250 50  0001 C CNN
-	1    3550 6150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:LED RED
 U 1 1 6126C52B
 P 9750 4200
@@ -102,25 +91,6 @@ F 3 "" H 2650 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 4700 3350 4700
-Wire Wire Line
-	3350 6050 3450 6050
-Wire Wire Line
-	3450 6250 3350 6250
-Wire Wire Line
-	3350 6250 3350 6400
-$Comp
-L power:GNDPWR #PWR?
-U 1 1 612D5902
-P 3350 6400
-F 0 "#PWR?" H 3350 6200 50  0001 C CNN
-F 1 "GNDPWR" H 3354 6246 50  0000 C CNN
-F 2 "" H 3350 6350 50  0001 C CNN
-F 3 "" H 3350 6350 50  0001 C CNN
-	1    3350 6400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	7250 4900 7250 4650
 Wire Wire Line
 	6950 4800 6950 4650
@@ -146,8 +116,6 @@ Wire Wire Line
 Wire Wire Line
 	6450 4700 6450 4250
 Connection ~ 6450 4250
-Wire Wire Line
-	3250 5000 6750 5000
 Wire Wire Line
 	6750 5000 6750 4650
 $Comp
@@ -433,16 +401,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4400 4250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3250 4800 4200 4800
-Wire Wire Line
-	3250 4900 4500 4900
-Connection ~ 4200 4800
-Wire Wire Line
-	4200 4800 6950 4800
-Connection ~ 4500 4900
-Wire Wire Line
-	4500 4900 7250 4900
-Wire Wire Line
 	4000 5100 8250 5100
 Wire Wire Line
 	4100 1850 4800 1850
@@ -564,21 +522,6 @@ F 3 "~" H 4600 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US 200Ω
-U 1 1 617204BC
-P 3350 5800
-F 0 "200Ω" H 3418 5846 50  0000 L CNN
-F 1 "R_US" H 3418 5755 50  0000 L CNN
-F 2 "" V 3390 5790 50  0001 C CNN
-F 3 "~" H 3350 5800 50  0001 C CNN
-	1    3350 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3350 4700 3350 5650
-Wire Wire Line
-	3350 6050 3350 5950
-$Comp
 L power:+3.3V #PWR?
 U 1 1 6174534F
 P 2650 2550
@@ -699,4 +642,73 @@ F 3 "~" H 9750 4650 50  0001 C CNN
 	1    9750 4650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3250 3100 3600 3100
+Wire Wire Line
+	3250 4100 3400 4100
+Wire Wire Line
+	3300 6050 3300 5950
+$Comp
+L Device:R_US 100Ω
+U 1 1 617204BC
+P 3300 5800
+F 0 "100Ω" H 3368 5846 50  0000 L CNN
+F 1 "R_US" H 3368 5755 50  0000 L CNN
+F 2 "" V 3340 5790 50  0001 C CNN
+F 3 "~" H 3300 5800 50  0001 C CNN
+	1    3300 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 612D5902
+P 3300 6400
+F 0 "#PWR?" H 3300 6200 50  0001 C CNN
+F 1 "GNDPWR" H 3304 6246 50  0000 C CNN
+F 2 "" H 3300 6350 50  0001 C CNN
+F 3 "" H 3300 6350 50  0001 C CNN
+	1    3300 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6250 3300 6400
+Wire Wire Line
+	3400 6250 3300 6250
+Wire Wire Line
+	3300 6050 3400 6050
+$Comp
+L Device:Buzzer BZ?
+U 1 1 6126BBFF
+P 3500 6150
+F 0 "BZ?" H 3652 6179 50  0000 L CNN
+F 1 "Buzzer" H 3652 6088 50  0000 L CNN
+F 2 "" V 3475 6250 50  0001 C CNN
+F 3 "~" V 3475 6250 50  0001 C CNN
+	1    3500 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3500 3500 3500
+Wire Wire Line
+	3600 4800 4200 4800
+Wire Wire Line
+	3600 3100 3600 4800
+Connection ~ 4200 4800
+Wire Wire Line
+	4200 4800 6950 4800
+Wire Wire Line
+	3500 4900 4500 4900
+Wire Wire Line
+	3500 3500 3500 4900
+Connection ~ 4500 4900
+Wire Wire Line
+	4500 4900 7250 4900
+Wire Wire Line
+	3400 5000 6750 5000
+Wire Wire Line
+	3400 4100 3400 5000
+Wire Wire Line
+	3250 5000 3300 5000
+Wire Wire Line
+	3300 5000 3300 5650
 $EndSCHEMATC
