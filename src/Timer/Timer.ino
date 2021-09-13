@@ -12,7 +12,7 @@
 #define SER      27
 #define RCLK     26
 #define SRCLK    25
-#define BUZZER   14
+#define BUZZER   12
 #define DATASIZE 16
 
 // giver pin assgin
