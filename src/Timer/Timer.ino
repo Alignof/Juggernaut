@@ -16,10 +16,10 @@
 #define DATASIZE 16
 
 // giver pin assgin
-const uint8_t NAVY_BUTTON  = 18;
-const uint8_t WHITE_BUTTON = 19;
-const uint8_t RED_BUTTON   = 21;
-const uint8_t BLUE_BUTTON  = 22;
+const uint8_t NAVY_BUTTON  = 22;
+const uint8_t WHITE_BUTTON = 18;
+const uint8_t RED_BUTTON   = 19;
+const uint8_t BLUE_BUTTON  = 23;
 
 typedef enum {
 	RED,
@@ -27,7 +27,7 @@ typedef enum {
 	GREEN,
 } SIGNAL;
 
-int time_limit = 150;
+int time_limit = 300;
 bool timer_stop = false;
 SIGNAL signal = YELLOW;
 EventGroupHandle_t eg_handle;
