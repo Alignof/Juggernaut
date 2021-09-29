@@ -15,22 +15,42 @@
 #define BUZZER   12
 #define DATASIZE 16
 
-// giver pin assgin
-const uint8_t NAVY_BUTTON  = 22;
-const uint8_t WHITE_BUTTON = 18;
-const uint8_t RED_BUTTON   = 19;
-const uint8_t BLUE_BUTTON  = 23;
-
 typedef enum {
 	RED,
 	YELLOW,
 	GREEN,
 } SIGNAL;
 
-int time_limit = 300;
 bool timer_stop = false;
 SIGNAL signal = YELLOW;
 EventGroupHandle_t eg_handle;
+
+void succeeded(void) {
+    signal     = GREEN;
+    timer_stop = true;
+    while(1) delay(1e5);
+}
+
+void failed(void) {
+    signal = RED;
+    timer_stop = true;
+    digitalWrite(BUZZER, HIGH);
+    delay(5000);
+    digitalWrite(BUZZER, LOW);
+    while(1) delay(1e5);
+}
+
+//=============================================================================
+//  START of giver code (copy the below code you wrote into the specification)
+//=============================================================================
+
+int time_limit = 300;
+
+// giver pin assgin
+const uint8_t NAVY_BUTTON  = 22;
+const uint8_t WHITE_BUTTON = 18;
+const uint8_t RED_BUTTON   = 19;
+const uint8_t BLUE_BUTTON  = 23;
 
 void gaming(void *pvParameters) {
 	bool flag1 = false;
@@ -46,20 +66,19 @@ void gaming(void *pvParameters) {
 		
 		// succeeded
 		if(flag1 && flag2 && flag3) {
-			signal     = GREEN;
-			timer_stop = true;
-			while(1) delay(1e5);
+            succeeded();
 		}
 
 		// failed
 		if(!flag4) {
-			signal = RED;
-			timer_stop = true;
-			digitalWrite(BUZZER, HIGH);
-			while(1) delay(1e5);
+            failed();
 		}
 	}
 }
+
+//=============================================================================
+//  END of giver code
+//=============================================================================
 
 void display(void *pvParameters) {
 	int ms;
