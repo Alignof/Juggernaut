@@ -121,6 +121,10 @@ void display(void *pvParameters) {
 		for(int i=1;i<=4;i++) {
 			data_send(i, 0, signal);
 		}
+
+        if(digitalRead(SYSSW) == LOW) {
+            digitalWrite(BUZZER, LOW);
+        }
 	}
 }
 
