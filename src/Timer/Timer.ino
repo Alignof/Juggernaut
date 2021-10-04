@@ -13,6 +13,7 @@
 #define RCLK     26
 #define SRCLK    25
 #define BUZZER   12
+#define SYSSW    36
 #define DATASIZE 16
 
 typedef enum {
@@ -35,7 +36,7 @@ void failed(void) {
     signal = RED;
     timer_stop = true;
     digitalWrite(BUZZER, HIGH);
-    delay(5000);
+    while(digitalRead(SYSSW) == HIGH);
     digitalWrite(BUZZER, LOW);
     while(1) delay(1e5);
 }
@@ -57,6 +58,7 @@ void gaming(void *pvParameters) {
 	bool flag2 = false;
 	bool flag3 = false;
 	bool flag4 = false;
+
 	while(1) {
 		delay(1);
 		flag1 = (digitalRead(NAVY_BUTTON)  == LOW);
@@ -131,6 +133,7 @@ void setup() {
 	pinMode(RCLK,   OUTPUT);
 	pinMode(SRCLK,  OUTPUT);
 	pinMode(BUZZER, OUTPUT);
+	pinMode(SYSSW,  INPUT);
 
 	// === declared by giver ===
 	pinMode(NAVY_BUTTON,  INPUT_PULLUP);
@@ -138,6 +141,8 @@ void setup() {
 	pinMode(RED_BUTTON,   INPUT_PULLUP);
 	pinMode(BLUE_BUTTON,  INPUT_PULLUP);
 	// =====================
+
+    while(digitalRead(SYSSW) == HIGH);
 
 	xTaskCreatePinnedToCore(gaming,  "gaming",  8192, NULL, 1, NULL, 1);
 	xTaskCreatePinnedToCore(display, "display", 8192, NULL, 1, NULL, 1);
