@@ -713,8 +713,6 @@ F 3 "" H 3300 5200 50  0001 C CNN
 	1    3300 5250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3300 4600 3300 5250
 $Comp
 L Device:R_US 270Ω?
 U 1 1 61287533
@@ -728,7 +726,6 @@ F 3 "~" H 6750 3600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3300 4600 3300 4500
-Connection ~ 3300 4600
 $Comp
 L power:+3.3V #PWR?
 U 1 1 6165DB78
@@ -752,5 +749,21 @@ F 2 "" V 3340 4340 50  0001 C CNN
 F 3 "~" H 3300 4350 50  0001 C CNN
 	1    3300 4350
 	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 4600 3300 4700
+Connection ~ 3300 4600
+Wire Wire Line
+	3300 5100 3300 5250
+$Comp
+L Switch:SW_Push SW?
+U 1 1 616981A3
+P 3300 4900
+F 0 "SW?" H 3300 5185 50  0001 C CNN
+F 1 "SW_Push" H 3300 4852 50  0000 R CNN
+F 2 "" H 3300 5100 50  0001 C CNN
+F 3 "~" H 3300 5100 50  0001 C CNN
+	1    3300 4900
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
