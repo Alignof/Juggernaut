@@ -3,7 +3,7 @@
  * @code name	Juggernaut
  * @author		Takana Norimasa <Alignof@outlook.com>
  * @brief		Educational bomb disposal game
- * @repository	https://github.com/Takana-Norimasa/Juggernaut
+ * @repository	https://github.com/Alignof/Juggernaut
  */ 
 
 #include "freertos/task.h"
