@@ -53,6 +53,13 @@ const uint8_t WHITE_BUTTON = 18;
 const uint8_t RED_BUTTON   = 19;
 const uint8_t BLUE_BUTTON  = 23;
 
+void setup_pin(void) {
+	pinMode(NAVY_BUTTON,  INPUT_PULLUP);
+	pinMode(WHITE_BUTTON, INPUT_PULLUP);
+	pinMode(RED_BUTTON,   INPUT_PULLUP);
+	pinMode(BLUE_BUTTON,  INPUT_PULLUP);
+}
+
 void gaming(void *pvParameters) {
 	bool flag1 = false;
 	bool flag2 = false;
@@ -139,12 +146,7 @@ void setup() {
 	pinMode(BUZZER, OUTPUT);
 	pinMode(SYSSW,  INPUT);
 
-	// === declared by giver ===
-	pinMode(NAVY_BUTTON,  INPUT_PULLUP);
-	pinMode(WHITE_BUTTON, INPUT_PULLUP);
-	pinMode(RED_BUTTON,   INPUT_PULLUP);
-	pinMode(BLUE_BUTTON,  INPUT_PULLUP);
-	// =====================
+    setup_pin();
 
     while(digitalRead(SYSSW) == HIGH);
 
