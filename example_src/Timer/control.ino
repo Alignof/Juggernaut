@@ -6,6 +6,9 @@
  * @repository	https://github.com/Alignof/Juggernaut
  */
 
+const uint8_t DIGIT_CORON = 10;
+const uint8_t DIGIT_NONE = 11;
+
 bool timer_stop	= false;
 SignalColor signal = YELLOW;
 EventGroupHandle_t eg_handle;
@@ -62,7 +65,7 @@ void display(void *pvParameters) {
 	signal = RED;
 	digitalWrite(BUZZER, HIGH);
 	while(1) {
-		data_send(5, 10, signal);
+		data_send(5, DIGIT_CORON, signal);
 		for(int i = 1; i <= 4; i++) {
 			data_send(i, 0, signal);
 		}
@@ -86,6 +89,7 @@ void setup() {
 	pinMode(BUZZER, OUTPUT);
 	pinMode(SYSSW, INPUT);
 
+	data_send(5, DIGIT_NONE, YELLOW);
 	setup_pin();
 
 	while(digitalRead(SYSSW) == HIGH);
@@ -98,8 +102,8 @@ void setup() {
 void data_send(int digit, int num, SignalColor rgb) {
 	int i;
 	uint16_t data;
-	int seg[11] = {
-        0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x03
+	int seg[12] = {
+        0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x03, 0x00
     };
 
 	/*
