@@ -1,0 +1,307 @@
+Cmp-Mod V01 Created by PcbNew   date = 2024-08-23T17:03:27+0900
+
+BeginCmp
+TimeStamp = 051181c9-1180-44ad-bbad-b7b12fd2d9f2
+Path = 
+Reference = hole_upper_right;
+ValeurCmp = MountingHole_2.7mm_M2.5;
+IdModule  = MountingHole:MountingHole_2.7mm_M2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 0a842e94-c94e-426f-9fac-c97a963cfdbf
+Path = 
+Reference = hole_lower_right;
+ValeurCmp = MountingHole_2.7mm_M2.5;
+IdModule  = MountingHole:MountingHole_2.7mm_M2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 18d56297-7f4c-4543-823a-fd0ab0325170
+Path = /00000000-0000-0000-0000-0000616fa5cb
+Reference = 270Ω2;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 1c3572a8-e0d6-4186-83ea-b1c6b3454931
+Path = /6d3282e8-928b-4698-bde7-332633c4d662
+Reference = U1;
+ValeurCmp = ESP32-DevKitC;
+IdModule  = PCM_Espressif:ESP32-DevKitC;
+EndCmp
+
+BeginCmp
+TimeStamp = 1ec7adaf-f787-47c4-a8f1-27100e315cee
+Path = /00000000-0000-0000-0000-000061287539
+Reference = 10k3;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 243aa623-adb9-473e-894f-42cd2b78258d
+Path = /00000000-0000-0000-0000-00006128754b
+Reference = 10k6;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 2974608e-cb25-41f7-98a2-5c3d957b6f2f
+Path = /00000000-0000-0000-0000-0000614650bb
+Reference = Q3;
+ValeurCmp = 2SC1815;
+IdModule  = Package_TO_SOT_THT:TO-92_Inline_Wide;
+EndCmp
+
+BeginCmp
+TimeStamp = 318da8e1-5611-42f7-b315-eb1a4fe3adc7
+Path = /6067b70d-beb8-47aa-b22d-9a8d51df8387
+Reference = 270Ω8;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 32ad9a68-8808-485d-ac2a-77fbcdb4a4f7
+Path = /00000000-0000-0000-0000-000061268075
+Reference = U2;
+ValeurCmp = 4digit_7seg_led;
+IdModule  = Library:OSL_40391_LRA;
+EndCmp
+
+BeginCmp
+TimeStamp = 33497bcf-0053-427f-a49c-fb4ae5115d33
+Path = /00000000-0000-0000-0000-000061701ad1
+Reference = 270Ω6;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 36e2a4ce-3641-4bea-a298-8d86daddb529
+Path = /a2c361be-5b92-47ed-9fc8-be6a2be89773
+Reference = RED1;
+ValeurCmp = LED;
+IdModule  = LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 37d84087-ae59-4267-98c0-4e4e7d6bcd06
+Path = /00000000-0000-0000-0000-00006128753f
+Reference = 10k4;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 3b4b0e7f-33cb-4a71-a848-6a38057048c8
+Path = /00000000-0000-0000-0000-000061287545
+Reference = 10k5;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 3d902874-c509-43c5-ac29-e49b37f88b1d
+Path = /00000000-0000-0000-0000-000061275560
+Reference = secondary1;
+ValeurCmp = 74HC595;
+IdModule  = Package_DIP:DIP-16_W7.62mm_Socket;
+EndCmp
+
+BeginCmp
+TimeStamp = 413ef1ca-efc9-4213-94bf-f12d1d2c22da
+Path = /00000000-0000-0000-0000-000061287533
+Reference = 10k2;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 42289b1b-d3c9-4a5c-8674-ebec1b476f12
+Path = /00000000-0000-0000-0000-00006126bbff
+Reference = BZ1;
+ValeurCmp = Buzzer;
+IdModule  = Buzzer_Beeper:Buzzer_15x7.5RM7.6;
+EndCmp
+
+BeginCmp
+TimeStamp = 4e6e768c-e486-412d-8c59-4f4356439cbb
+Path = /b4b9df35-9fff-45e8-bb7c-079cefaaf95e
+Reference = GREEN1;
+ValeurCmp = LED;
+IdModule  = LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5606d2bb-2265-4a05-8a7d-7bdb234e13c1
+Path = 
+Reference = hole_upper_left;
+ValeurCmp = MountingHole_2.7mm_M2.5;
+IdModule  = MountingHole:MountingHole_2.7mm_M2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 5ed7da29-6465-4f20-a9ac-22c962b1c6c9
+Path = /00000000-0000-0000-0000-0000616fd426
+Reference = 270Ω3;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 620d79e4-7d98-42e7-a3bc-a6a6db205acc
+Path = /59cb4614-a5ee-4bd6-ba81-9a62415a4cf7
+Reference = J2;
+ValeurCmp = Conn_02x20_Row_Letter_Last;
+IdModule  = Library:PinSocket_2x20_P2.54mm_1a-19a;
+EndCmp
+
+BeginCmp
+TimeStamp = 669a5353-c100-47fb-a65f-ebf4aef3b5e5
+Path = /00000000-0000-0000-0000-000061469b7b
+Reference = Q4;
+ValeurCmp = 2SC1815;
+IdModule  = Package_TO_SOT_THT:TO-92_Inline_Wide;
+EndCmp
+
+BeginCmp
+TimeStamp = 6fbb2e44-de4d-4b05-96bf-32484d063df9
+Path = 
+Reference = hole_lower_left;
+ValeurCmp = MountingHole_2.7mm_M2.5;
+IdModule  = MountingHole:MountingHole_2.7mm_M2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 84920824-2f09-4acb-a7d1-414517d5ea16
+Path = /00000000-0000-0000-0000-0000616f6b11
+Reference = 270Ω1;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 8dd5c12c-85d0-44ac-96eb-3fc65982f7f9
+Path = /00000000-0000-0000-0000-000061701ac5
+Reference = 270Ω4;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 8e74880f-fe95-4200-86f1-0aca184f991e
+Path = /00000000-0000-0000-0000-000061289d68
+Reference = Q1;
+ValeurCmp = 2SC1815;
+IdModule  = Package_TO_SOT_THT:TO-92_Inline_Wide;
+EndCmp
+
+BeginCmp
+TimeStamp = 937d1e0c-b4aa-4382-b8fe-473a877f2cc0
+Path = /00000000-0000-0000-0000-000061463dbe
+Reference = Q2;
+ValeurCmp = 2SC1815;
+IdModule  = Package_TO_SOT_THT:TO-92_Inline_Wide;
+EndCmp
+
+BeginCmp
+TimeStamp = a1c594de-3c59-4816-820a-49f7a2e7c1ef
+Path = /00000000-0000-0000-0000-0000616981a3
+Reference = SW1;
+ValeurCmp = SW_Push;
+IdModule  = Button_Switch_THT:SW_PUSH-12mm_Wuerth-430476085716;
+EndCmp
+
+BeginCmp
+TimeStamp = a1fb0e1a-a927-4b9e-8d48-9ca6e0d867bf
+Path = /00298102-c3db-436b-a622-0d7a3dade7e5
+Reference = 270Ω9;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = a6981329-bb24-4676-8c09-167b72cb7b41
+Path = 
+Reference = G***;
+ValeurCmp = LOGO;
+IdModule  = Library:QR_juggernaut;
+EndCmp
+
+BeginCmp
+TimeStamp = c2aa8939-7006-4696-8400-7ffd8f14719a
+Path = /00000000-0000-0000-0000-0000616b8ebf
+Reference = 270Ω7;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = cd118fdd-f30b-4356-9672-606fc262c03d
+Path = /7e0174be-407a-4ad3-8fe3-e2f7a9b14e00
+Reference = YELLOW1;
+ValeurCmp = LED;
+IdModule  = LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = da0627c0-7177-48f5-9304-468713a4a2e1
+Path = /00000000-0000-0000-0000-00006165705d
+Reference = 10k1;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = dafabb53-331c-4999-9527-92c42fd0c50a
+Path = /070d4504-1d04-4b14-95c9-2eefaae4a01f
+Reference = J3;
+ValeurCmp = Conn_02x20_Row_Letter_Last;
+IdModule  = Library:PinSocket_2x20_P2.54mm_20a_38a;
+EndCmp
+
+BeginCmp
+TimeStamp = ed423677-0d4a-40f4-85cf-e32673629c84
+Path = /00000000-0000-0000-0000-000061469b81
+Reference = Q5;
+ValeurCmp = 2SC1815;
+IdModule  = Package_TO_SOT_THT:TO-92_Inline_Wide;
+EndCmp
+
+BeginCmp
+TimeStamp = ef530928-dd70-4d67-9fc9-600aad188cb3
+Path = /79537cee-0954-4dd8-b0c7-c634454d8050
+Reference = J1;
+ValeurCmp = Conn_01x02_Socket;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = f326422f-7249-4a94-a870-dff49a5fde0f
+Path = /00000000-0000-0000-0000-0000612778de
+Reference = primary1;
+ValeurCmp = 74HC595;
+IdModule  = Package_DIP:DIP-16_W7.62mm_Socket;
+EndCmp
+
+BeginCmp
+TimeStamp = fc287fcb-529b-4375-86a8-c530c47e08f1
+Path = /00000000-0000-0000-0000-000061701acb
+Reference = 270Ω5;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = fcfc50f9-8242-4cc8-b79b-329f92152491
+Path = /ae99ae69-e177-4b0e-a7ef-f2e4798a9d6d
+Reference = 270Ω10;
+ValeurCmp = R_US;
+IdModule  = Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal;
+EndCmp
+
+EndListe
