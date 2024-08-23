@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 2.7,
-          "height": 2.7,
-          "width": 2.7
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -55,7 +55,10 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|123559681|90190001|1c3572a8-e0d6-4186-83ea-b1c6b3454931|620d79e4-7d98-42e7-a3bc-a6a6db205acc",
+        "courtyards_overlap|148169999|115080001|1c3572a8-e0d6-4186-83ea-b1c6b3454931|dafabb53-331c-4999-9527-92c42fd0c50a"
+      ],
       "meta": {
         "version": 2
       },
@@ -181,6 +184,13 @@
         }
       ],
       "zones_allow_external_fillets": false
+    },
+    "ipc2581": {
+      "dist": "",
+      "distpn": "",
+      "internal_id": "",
+      "mfg": "",
+      "mpn": ""
     },
     "layer_presets": [],
     "viewports": []
@@ -405,7 +415,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "control2.kicad_pro",
+    "filename": "gen1.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -440,8 +450,11 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "specctra_dsn": "../../../../../../tmp/control_100x100.dsn",
+      "plot": "",
+      "pos_files": "",
+      "specctra_dsn": "../../../../tmp/control.dsn",
       "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
