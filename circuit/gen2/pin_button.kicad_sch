@@ -333,6 +333,154 @@
 				)
 			)
 		)
+		(symbol "SW_Push_1"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW1"
+				(at 0 7.239 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.2192 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" "Button_Switch_THT:SW_PUSH-12mm_Wuerth-430476085716"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_1_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "SW_Push_1_1_1"
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers hide)
 			(pin_names
@@ -759,14 +907,30 @@
 		)
 	)
 	(junction
-		(at 130.81 90.17)
+		(at 116.84 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9347f70-7c0a-4927-ba4c-f2a680f23fad")
+	)
+	(junction
+		(at 139.7 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cde7d592-e2bd-4de0-a1c4-ab91f30b1995")
 	)
 	(wire
 		(pts
-			(xy 130.81 85.09) (xy 130.81 90.17)
+			(xy 116.84 69.85) (xy 116.84 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1005c6c9-2807-422b-8c04-52ce1fbe6c93")
+	)
+	(wire
+		(pts
+			(xy 139.7 80.01) (xy 139.7 85.09)
 		)
 		(stroke
 			(width 0)
@@ -776,7 +940,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 90.17) (xy 137.16 90.17)
+			(xy 139.7 85.09) (xy 146.05 85.09)
 		)
 		(stroke
 			(width 0)
@@ -786,7 +950,17 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 95.25) (xy 167.64 95.25)
+			(xy 116.84 85.09) (xy 123.19 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b075516-5636-4605-b0c2-cba40f2ea8b5")
+	)
+	(wire
+		(pts
+			(xy 171.45 90.17) (xy 175.26 90.17)
 		)
 		(stroke
 			(width 0)
@@ -796,7 +970,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 74.93) (xy 130.81 77.47)
+			(xy 139.7 69.85) (xy 139.7 72.39)
 		)
 		(stroke
 			(width 0)
@@ -806,7 +980,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 90.17) (xy 171.45 90.17)
+			(xy 171.45 85.09) (xy 180.34 85.09)
 		)
 		(stroke
 			(width 0)
@@ -816,7 +990,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 109.22) (xy 130.81 118.11)
+			(xy 139.7 104.14) (xy 139.7 113.03)
 		)
 		(stroke
 			(width 0)
@@ -826,7 +1000,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 90.17) (xy 130.81 99.06)
+			(xy 139.7 85.09) (xy 139.7 93.98)
 		)
 		(stroke
 			(width 0)
@@ -836,7 +1010,37 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 95.25) (xy 167.64 128.27)
+			(xy 116.84 104.14) (xy 116.84 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e6fd29d-900e-47cf-bafa-0903f3f22020")
+	)
+	(wire
+		(pts
+			(xy 116.84 85.09) (xy 116.84 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6966f79-793a-47ff-a14f-ef984d6b01c3")
+	)
+	(wire
+		(pts
+			(xy 116.84 80.01) (xy 116.84 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b99911d6-8b48-4d9d-9a87-8dd792e18be2")
+	)
+	(wire
+		(pts
+			(xy 175.26 90.17) (xy 175.26 113.03)
 		)
 		(stroke
 			(width 0)
@@ -844,9 +1048,21 @@
 		)
 		(uuid "fabde7d6-7f15-435d-9bfa-a2c157ef90eb")
 	)
-	(hierarchical_label "button"
+	(hierarchical_label "select_button"
 		(shape input)
-		(at 171.45 90.17 0)
+		(at 123.19 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9202256a-1706-4f27-9c81-89fd400037b2")
+	)
+	(hierarchical_label "buzzer"
+		(shape input)
+		(at 180.34 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -856,9 +1072,9 @@
 		)
 		(uuid "9ad7b4a7-ee45-4861-80d2-ab3c82977430")
 	)
-	(hierarchical_label "buzzer"
+	(hierarchical_label "start_button"
 		(shape input)
-		(at 137.16 90.17 0)
+		(at 146.05 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -869,35 +1085,18 @@
 		(uuid "b8e41c71-0f20-4449-bc4a-09e0f3adf51e")
 	)
 	(symbol
-		(lib_id "Device:Buzzer")
-		(at 162.56 92.71 0)
+		(lib_id "control-rescue:+3.3V-power")
+		(at 116.84 69.85 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "201a2a1b-0ae5-4172-8f9d-cf93e1467723")
-		(property "Reference" "BZ1"
-			(at 158.6992 91.9734 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Buzzer"
-			(at 158.6992 94.2848 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Buzzer_Beeper:Buzzer_15x7.5RM7.6"
-			(at 163.195 90.17 90)
+		(fields_autoplaced yes)
+		(uuid "005ace2d-e4ac-49f8-9101-1491366b838b")
+		(property "Reference" "#PWR019"
+			(at 116.84 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -905,8 +1104,25 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 163.195 90.17 90)
+		(property "Value" "+3V3"
+			(at 116.84 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -915,7 +1131,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 162.56 92.71 0)
+			(at 116.84 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6563b7dc-cd4d-41a0-b392-83d5351d87f5")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Buzzer")
+		(at 168.91 87.63 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "201a2a1b-0ae5-4172-8f9d-cf93e1467723")
+		(property "Reference" "BZ1"
+			(at 165.0492 86.8934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HDB06LFPN"
+			(at 165.0492 89.2048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Buzzer_Beeper:Buzzer_15x7.5RM7.6"
+			(at 169.545 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 169.545 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 168.91 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -940,16 +1223,16 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 130.81 118.11 0)
+		(at 116.84 113.03 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2bb8cc4a-9ce7-4e6e-875c-29a324aeed3b")
+		(uuid "23e8e6df-8703-40e4-9a63-daddd9aed2eb")
 		(property "Reference" "#PWR020"
-			(at 130.81 123.19 0)
+			(at 116.84 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -958,7 +1241,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 130.7084 122.0216 0)
+			(at 116.7384 116.9416 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -966,7 +1249,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 130.81 119.38 0)
+			(at 116.84 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -975,7 +1258,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 130.81 119.38 0)
+			(at 116.84 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -984,7 +1267,73 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 118.11 0)
+			(at 116.84 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50ecaf14-080b-481d-82a9-aa99b71c385a")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 139.7 113.03 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2bb8cc4a-9ce7-4e6e-875c-29a324aeed3b")
+		(property "Reference" "#PWR022"
+			(at 139.7 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 139.5984 116.9416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -998,25 +1347,42 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "control-rescue:+3.3V-power")
-		(at 130.81 74.93 0)
-		(mirror y)
+		(lib_id "Device:R_US")
+		(at 116.84 76.2 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7bf03b8e-43bd-4965-8e59-3e0de70b7762")
-		(property "Reference" "#PWR019"
-			(at 130.81 78.74 0)
+		(uuid "40f99967-0deb-43c0-b557-6379af305afd")
+		(property "Reference" "R_US16"
+			(at 118.5672 77.3684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 118.5672 75.057 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 117.856 75.946 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1024,25 +1390,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 130.81 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 130.81 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 74.93 0)
+		(property "Datasheet" "~"
+			(at 116.84 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1051,7 +1400,77 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 74.93 0)
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0c3cbc2-8cc2-4c86-a955-6f9c87195402")
+		)
+		(pin "2"
+			(uuid "b5b6d91c-42e9-4316-9e18-28285bc15dc9")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
+					(reference "R_US16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "control-rescue:+3.3V-power")
+		(at 139.7 69.85 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7bf03b8e-43bd-4965-8e59-3e0de70b7762")
+		(property "Reference" "#PWR021"
+			(at 139.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 139.7 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1065,15 +1484,16 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
-					(reference "#PWR019")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
+		(lib_name "SW_Push_1")
 		(lib_id "Switch:SW_Push")
-		(at 130.81 104.14 270)
+		(at 139.7 99.06 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1081,8 +1501,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c6a0dddc-aebd-4ee9-af82-f040da9aec9a")
-		(property "Reference" "SW1"
-			(at 138.049 104.14 0)
+		(property "Reference" "SW2"
+			(at 146.939 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1090,8 +1510,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 129.5908 104.14 0)
+		(property "Value" "start"
+			(at 138.4808 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1100,7 +1520,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH-12mm_Wuerth-430476085716"
-			(at 135.89 104.14 0)
+			(at 144.78 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1109,7 +1529,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 104.14 0)
+			(at 144.78 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1118,7 +1538,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 104.14 0)
+			(at 139.7 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1135,7 +1555,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
-					(reference "SW1")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -1143,7 +1563,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 130.81 81.28 0)
+		(at 139.7 76.2 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1151,8 +1571,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ca4a25d8-2d15-4c7d-ac68-ee263d93fff8")
-		(property "Reference" "10k6"
-			(at 132.5372 82.4484 0)
+		(property "Reference" "R_US17"
+			(at 141.4272 77.3684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1160,8 +1580,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
-			(at 132.5372 80.137 0)
+		(property "Value" "10k"
+			(at 141.4272 75.057 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1169,8 +1589,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 131.826 81.026 90)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 140.716 75.946 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1179,7 +1599,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 130.81 81.28 0)
+			(at 139.7 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1188,7 +1608,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 81.28 0)
+			(at 139.7 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1205,24 +1625,24 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
-					(reference "10k6")
+					(reference "R_US17")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GNDPWR")
-		(at 167.64 128.27 0)
-		(mirror y)
+		(lib_id "Switch:SW_Push")
+		(at 116.84 99.06 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f72a3b42-7f7d-4e43-ad7d-2d4a930e881e")
-		(property "Reference" "#PWR021"
-			(at 167.64 133.35 0)
+		(uuid "ebf4182a-dd28-4e19-b7fd-e87d5bf38e67")
+		(property "Reference" "SW1"
+			(at 124.079 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1230,16 +1650,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
-			(at 167.64 133.35 0)
+		(property "Value" "select"
+			(at 115.6208 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 167.64 129.54 0)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645"
+			(at 121.92 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1247,8 +1668,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 167.64 129.54 0)
+		(property "Datasheet" "~"
+			(at 121.92 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1257,7 +1678,76 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 128.27 0)
+			(at 116.84 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1608b7bf-e817-476b-ad96-3251e1dbe8b3")
+		)
+		(pin "1"
+			(uuid "ad298e4a-6299-4a2f-a68b-87c3f95ed7ba")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 175.26 113.03 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f72a3b42-7f7d-4e43-ad7d-2d4a930e881e")
+		(property "Reference" "#PWR023"
+			(at 175.26 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 175.26 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1271,7 +1761,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/e60b34d4-244b-4723-9440-93f5b167882c"
-					(reference "#PWR021")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)

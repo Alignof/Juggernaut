@@ -5,6 +5,208 @@
 	(uuid "cab490b5-56d3-47cf-bb3b-ce01d75527e6")
 	(paper "A4")
 	(lib_symbols
+		(symbol "2SC1815_1"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q1"
+				(at 4.826 1.1684 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "2SC1815"
+				(at 4.826 -1.143 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Low Noise Audio NPN Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?92*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "2SC1815_1_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.508 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "2SC1815_1_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "74xx:74HC595"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -704,208 +906,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Transistor_BJT:2SC1815"
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "2SC1815"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-				(at 5.08 -1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "0.15A Ic, 50V Vce, Low Noise Audio NPN Transistor, TO-92"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Low Noise Audio NPN Transistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO?92*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "2SC1815_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0.508 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "2SC1815_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 5.08)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3019,153 +3019,6 @@
 		(uuid "d916d083-883d-4265-93f5-4b7549b83470")
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 154.94 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00e2f35f-6060-4771-aeb0-69905f2abba4")
-		(property "Reference" "10k2"
-			(at 156.6672 97.8916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 156.6672 100.203 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 155.956 99.314 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c687fe0a-c886-47ed-b62b-7bfc68cb915d")
-		)
-		(pin "1"
-			(uuid "039007f6-8fcc-440b-85b4-0f62f22126a8")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "10k2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:2SC1815")
-		(at 173.99 59.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0521f205-82aa-4f1d-ade8-9fcf51b97298")
-		(property "Reference" "Q2"
-			(at 178.816 58.5216 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2SC1815"
-			(at 178.816 60.833 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
-			(at 179.07 61.595 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
-			(at 173.99 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 173.99 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "75f285e1-f7a2-4d97-a5e8-07f92ebe8c40")
-		)
-		(pin "2"
-			(uuid "164ccaab-c9f8-4fc2-965e-09e3cb7dac86")
-		)
-		(pin "1"
-			(uuid "11a1e72f-50bf-4be6-b416-cea510ea8e40")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 217.17 140.97 0)
 		(unit 1)
@@ -3296,16 +3149,160 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2SC1815")
-		(at 223.52 52.07 0)
+		(lib_id "Device:R_US")
+		(at 157.48 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "28aa69c7-addd-4d69-8a80-371280f99ce5")
-		(property "Reference" "Q5"
-			(at 228.346 50.9016 0)
+		(fields_autoplaced yes)
+		(uuid "1a0f94e4-58fa-43d4-8030-cb0ac483dc34")
+		(property "Reference" "R_US10"
+			(at 159.2072 97.8916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k"
+			(at 159.2072 100.203 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 158.496 99.314 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "21d2689d-0ffd-46b2-978b-d60c431b6f68")
+		)
+		(pin "2"
+			(uuid "47beea9f-90f0-4102-bb36-a679dc21ec06")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 87.63 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "23c6888a-c92b-421a-ba84-71436d99202a")
+		(property "Reference" "R_US2"
+			(at 89.3572 89.0016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "270"
+			(at 89.3572 91.313 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 88.646 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 87.63 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3806771a-8dff-4431-b44f-438165b2b7c2")
+		)
+		(pin "1"
+			(uuid "5deb270b-fd74-4e58-afd1-9b3047cbcce4")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "2SC1815_1")
+		(lib_id "Transistor_BJT:2SC1815")
+		(at 173.99 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "28d89ae3-4dfe-4149-9d9a-8db9e1c5b308")
+		(property "Reference" "Q2"
+			(at 178.816 58.5216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3314,7 +3311,7 @@
 			)
 		)
 		(property "Value" "2SC1815"
-			(at 228.346 53.213 0)
+			(at 178.816 60.833 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3322,8 +3319,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
-			(at 228.6 53.975 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 179.07 61.595 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3334,7 +3331,7 @@
 			)
 		)
 		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
-			(at 223.52 52.07 0)
+			(at 173.99 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3344,7 +3341,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 223.52 52.07 0)
+			(at 173.99 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3352,19 +3349,19 @@
 				(hide yes)
 			)
 		)
+		(pin "2"
+			(uuid "59ae2abd-604d-4174-9501-701787ed623f")
+		)
 		(pin "1"
-			(uuid "945cdbab-3321-4fd7-a889-237a05f7508d")
+			(uuid "a547c2f3-d097-419f-ba78-8628b96bec6d")
 		)
 		(pin "3"
-			(uuid "b9221d41-483c-4e15-8ff3-d8c1ffc56c88")
-		)
-		(pin "2"
-			(uuid "6d2f6162-d068-4f88-a48e-1d53129b3751")
+			(uuid "6e8c7cee-c778-4055-9abd-5e580b36258e")
 		)
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "Q5")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -3463,7 +3460,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
 			(at 162.56 115.57 0)
 			(effects
 				(font
@@ -3542,150 +3539,6 @@
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
 					(reference "primary1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 157.48 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4cd4dfb2-b671-41a4-aa09-aca01a54a4e1")
-		(property "Reference" "10k3"
-			(at 159.2072 97.8916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 159.2072 100.203 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 158.496 99.314 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 157.48 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "88c8b577-593a-4d68-a3f8-cdc5200b1911")
-		)
-		(pin "1"
-			(uuid "8233481a-d6c1-428b-9522-b6c52da7273f")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "10k3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 160.02 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5741728d-b5ea-4812-abbc-d487d386751d")
-		(property "Reference" "10k4"
-			(at 161.7472 97.8916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 161.7472 100.203 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 161.036 99.314 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 160.02 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 160.02 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ecd6217d-f4e9-42fb-908d-6ab35e16d96b")
-		)
-		(pin "2"
-			(uuid "71ca7f22-49e8-4edc-b9a1-83e35a35fa33")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "10k4")
 					(unit 1)
 				)
 			)
@@ -3816,6 +3669,77 @@
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 97.79 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "661245d7-e559-4797-a850-6b2f01c48a6a")
+		(property "Reference" "R_US6"
+			(at 99.5172 89.0016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "270"
+			(at 99.5172 91.313 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 98.806 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "32432fe7-3895-4d93-ac3f-ad1f8b6483cb")
+		)
+		(pin "1"
+			(uuid "d8821f61-7f05-4ae5-9b81-6c8d53c60e0a")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US6")
 					(unit 1)
 				)
 			)
@@ -3978,7 +3902,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
 			(at 92.71 115.57 0)
 			(effects
 				(font
@@ -4063,6 +3987,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 160.02 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b19af1d-a315-4bd4-9ce2-17b5386704d1")
+		(property "Reference" "R_US11"
+			(at 161.7472 97.8916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k"
+			(at 161.7472 100.203 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 161.036 99.314 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b976fa5c-e87b-4028-97be-e9405be48919")
+		)
+		(pin "2"
+			(uuid "a39cf5fe-a295-4681-ae9a-199c5a85b582")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 217.17 125.73 90)
 		(unit 1)
@@ -4071,7 +4067,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7c22dbd2-af4b-46eb-b848-f653d978992d")
-		(property "Reference" "YELLOW1"
+		(property "Reference" "LED2"
 			(at 211.6582 125.9078 0)
 			(effects
 				(font
@@ -4079,7 +4075,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "YELLOW"
 			(at 213.9696 125.9078 0)
 			(effects
 				(font
@@ -4087,7 +4083,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 217.17 125.73 0)
 			(effects
 				(font
@@ -4123,78 +4119,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "YELLOW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 90.17 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7c56dde2-a021-424c-879d-ea72e348d31b")
-		(property "Reference" "270Ω3"
-			(at 91.8972 89.0016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 91.8972 91.313 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 91.186 90.424 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 90.17 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "33eb6d2a-1405-4a87-b577-b3faaa0c7ebb")
-		)
-		(pin "2"
-			(uuid "d9f31018-01c2-4a6f-b673-e25cee89f39f")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω3")
+					(reference "LED2")
 					(unit 1)
 				)
 			)
@@ -4275,7 +4200,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "87f5802a-b926-4038-8e31-a60e68138e2e")
-		(property "Reference" "10k5"
+		(property "Reference" "R_US12"
 			(at 164.2872 97.8916 0)
 			(effects
 				(font
@@ -4284,7 +4209,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "10k"
 			(at 164.2872 100.203 0)
 			(effects
 				(font
@@ -4293,7 +4218,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 163.576 99.314 90)
 			(effects
 				(font
@@ -4329,7 +4254,83 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "10k5")
+					(reference "R_US12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "2SC1815_1")
+		(lib_id "Transistor_BJT:2SC1815")
+		(at 207.01 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "89f2b8fc-9aff-4fed-b339-0cf6ebfe8de1")
+		(property "Reference" "Q4"
+			(at 211.836 53.4416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2SC1815"
+			(at 211.836 55.753 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 212.09 56.515 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
+			(at 207.01 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 207.01 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b8bee047-7add-4eb7-8a2b-a45b3346d4c8")
+		)
+		(pin "1"
+			(uuid "fc711a1a-bf02-4146-89f8-4047b1d3a9ff")
+		)
+		(pin "3"
+			(uuid "d2c5b274-1d9f-4127-a6a6-a2901e657b9c")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -4411,7 +4412,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "907d0ac9-0dfd-47ce-a238-ff98cd7b19b9")
-		(property "Reference" "10k1"
+		(property "Reference" "R_US8"
 			(at 154.1272 97.8916 0)
 			(effects
 				(font
@@ -4421,7 +4422,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "10k"
 			(at 154.1272 100.203 0)
 			(effects
 				(font
@@ -4431,7 +4432,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 153.416 99.314 90)
 			(effects
 				(font
@@ -4467,23 +4468,24 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "10k1")
+					(reference "R_US8")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
+		(lib_name "2SC1815_1")
 		(lib_id "Transistor_BJT:2SC1815")
-		(at 207.01 54.61 0)
+		(at 190.5 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "91874ec6-56fd-4f31-ae50-1a1817d78ab1")
-		(property "Reference" "Q4"
-			(at 211.836 53.4416 0)
+		(uuid "967f05c4-d2b5-48fd-8928-a89eccd21da0")
+		(property "Reference" "Q3"
+			(at 195.326 55.9816 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4492,7 +4494,7 @@
 			)
 		)
 		(property "Value" "2SC1815"
-			(at 211.836 55.753 0)
+			(at 195.326 58.293 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4500,8 +4502,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
-			(at 212.09 56.515 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 195.58 59.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4512,7 +4514,7 @@
 			)
 		)
 		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
-			(at 207.01 54.61 0)
+			(at 190.5 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4522,7 +4524,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 207.01 54.61 0)
+			(at 190.5 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4531,18 +4533,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "cc48a3b9-c1b8-4770-8336-df7a9d48d896")
-		)
-		(pin "3"
-			(uuid "6f806fc9-3593-44f9-a7f9-596c0ace006a")
+			(uuid "18236226-c1de-4116-8505-fdb59be1d70b")
 		)
 		(pin "1"
-			(uuid "6c62abe8-2c6a-4f96-a614-fe8bde06db60")
+			(uuid "872b6e7c-3a89-44f9-90d7-9d94d20601fd")
+		)
+		(pin "3"
+			(uuid "0cfd6d96-8989-4ead-8a41-35c36af58ff9")
 		)
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "Q4")
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -4557,7 +4559,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a5be6d5e-bc7c-4fb5-b2a2-cf03c0059ae4")
-		(property "Reference" "270Ω1"
+		(property "Reference" "R_US1"
 			(at 86.8172 89.0016 0)
 			(effects
 				(font
@@ -4567,7 +4569,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "270"
 			(at 86.8172 91.313 0)
 			(effects
 				(font
@@ -4577,7 +4579,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 86.106 90.424 90)
 			(effects
 				(font
@@ -4613,78 +4615,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 95.25 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a6e8fee5-cb62-4a1c-ac55-8952ca6a4d33")
-		(property "Reference" "270Ω5"
-			(at 96.9772 89.0016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 96.9772 91.313 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 96.266 90.424 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 95.25 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 95.25 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9747bc87-ab84-4b24-9f8f-f4660dd6d201")
-		)
-		(pin "1"
-			(uuid "595d31a6-3551-446b-a600-3bc58ed75edb")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω5")
+					(reference "R_US1")
 					(unit 1)
 				)
 			)
@@ -4699,7 +4630,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a8dfb796-560f-42a5-b110-36cfcce82ec9")
-		(property "Reference" "270Ω9"
+		(property "Reference" "R_US14"
 			(at 218.8972 109.3216 0)
 			(effects
 				(font
@@ -4708,7 +4639,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "270"
 			(at 218.8972 111.633 0)
 			(effects
 				(font
@@ -4717,7 +4648,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 218.186 110.744 90)
 			(effects
 				(font
@@ -4753,78 +4684,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 97.79 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ae6b3d60-6da2-40b5-a7a0-f7f79b2b3d14")
-		(property "Reference" "270Ω6"
-			(at 99.5172 89.0016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 99.5172 91.313 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 98.806 90.424 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 97.79 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 97.79 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f138d688-29ae-4bfb-86d1-96c305c6e6d2")
-		)
-		(pin "2"
-			(uuid "a4c1157f-816f-43e9-9830-e809fc988e1d")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω6")
+					(reference "R_US14")
 					(unit 1)
 				)
 			)
@@ -4848,7 +4708,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "4digit_7seg_led"
+		(property "Value" "OSL_40391_LRA"
 			(at 130.81 35.9918 0)
 			(effects
 				(font
@@ -4932,6 +4792,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 92.71 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b0c32831-e913-4438-b060-2ea742896443")
+		(property "Reference" "R_US4"
+			(at 94.4372 89.0016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "270"
+			(at 94.4372 91.313 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 93.726 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2013f5bc-d420-4ade-bc9a-96713f4506bf")
+		)
+		(pin "1"
+			(uuid "50c82bea-d55c-4fd8-8537-11fd9736662b")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDPWR")
 		(at 226.06 73.66 0)
 		(unit 1)
@@ -4997,6 +4928,7 @@
 		)
 	)
 	(symbol
+		(lib_name "2SC1815_1")
 		(lib_id "Transistor_BJT:2SC1815")
 		(at 157.48 62.23 0)
 		(unit 1)
@@ -5023,7 +4955,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 162.56 64.135 0)
 			(effects
 				(font
@@ -5080,7 +5012,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bc09a22d-52f9-45e3-ac89-d107369a6118")
-		(property "Reference" "270Ω10"
+		(property "Reference" "R_US15"
 			(at 230.3272 109.3216 0)
 			(effects
 				(font
@@ -5089,7 +5021,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "270"
 			(at 230.3272 111.633 0)
 			(effects
 				(font
@@ -5098,7 +5030,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 229.616 110.744 90)
 			(effects
 				(font
@@ -5134,7 +5066,155 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω10")
+					(reference "R_US15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "2SC1815_1")
+		(lib_id "Transistor_BJT:2SC1815")
+		(at 223.52 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be60abab-6cc4-4dd5-9e4d-f42f407b852f")
+		(property "Reference" "Q5"
+			(at 228.346 50.9016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2SC1815"
+			(at 228.346 53.213 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 228.6 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
+			(at 223.52 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 223.52 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "98034152-1c27-45ff-a99d-43e29bf1801a")
+		)
+		(pin "1"
+			(uuid "a6650666-c40e-4ca2-a521-e83ae09fbad4")
+		)
+		(pin "3"
+			(uuid "74258d4d-9b21-4813-af7b-34951934f555")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 154.94 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bfd622c5-7941-43d2-b86a-50e3dfe3fb6e")
+		(property "Reference" "R_US9"
+			(at 156.6672 97.8916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k"
+			(at 156.6672 100.203 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 155.956 99.314 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f5adaf6-a4e6-4798-bf55-0039bcb422d2")
+		)
+		(pin "2"
+			(uuid "77ded71e-bc69-4cd4-839f-3f1dd304222c")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US9")
 					(unit 1)
 				)
 			)
@@ -5215,7 +5295,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c5e1858a-f813-42d7-beff-ef2d9e650910")
-		(property "Reference" "RED1"
+		(property "Reference" "LED3"
 			(at 223.0882 125.9078 0)
 			(effects
 				(font
@@ -5223,7 +5303,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "RED"
 			(at 225.3996 125.9078 0)
 			(effects
 				(font
@@ -5231,7 +5311,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 228.6 125.73 0)
 			(effects
 				(font
@@ -5267,7 +5347,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "RED1")
+					(reference "LED3")
 					(unit 1)
 				)
 			)
@@ -5282,7 +5362,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c81b0e77-7f86-445a-a3c1-24b1346ac72b")
-		(property "Reference" "270Ω7"
+		(property "Reference" "R_US7"
 			(at 102.0572 89.0016 0)
 			(effects
 				(font
@@ -5291,7 +5371,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "270"
 			(at 102.0572 91.313 0)
 			(effects
 				(font
@@ -5300,7 +5380,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 101.346 90.424 90)
 			(effects
 				(font
@@ -5336,82 +5416,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:2SC1815")
-		(at 190.5 57.15 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cf5f0851-0e00-44b5-8572-b5df17bdbbcd")
-		(property "Reference" "Q3"
-			(at 195.326 55.9816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2SC1815"
-			(at 195.326 58.293 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
-			(at 195.58 59.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf"
-			(at 190.5 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 190.5 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "56eaf67e-46de-49c5-b6ca-cefab76a33c2")
-		)
-		(pin "3"
-			(uuid "6dbc6feb-1b60-4abe-8eee-b5d1fc273c36")
-		)
-		(pin "2"
-			(uuid "a6d4c93f-99dd-42af-93a1-eb8a07332dd5")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "Q3")
+					(reference "R_US7")
 					(unit 1)
 				)
 			)
@@ -5419,15 +5424,15 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 87.63 90.17 0)
+		(at 90.17 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d7e23351-4287-4a6f-8884-4fa2dee55493")
-		(property "Reference" "270Ω2"
-			(at 89.3572 89.0016 0)
+		(uuid "d11a04e3-a65d-4539-8eba-6d5f0d8f8110")
+		(property "Reference" "R_US3"
+			(at 91.8972 89.0016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5436,8 +5441,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "R_US"
-			(at 89.3572 91.313 0)
+		(property "Value" "270"
+			(at 91.8972 91.313 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5446,8 +5451,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 88.646 90.424 90)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 91.186 90.424 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5456,7 +5461,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 87.63 90.17 0)
+			(at 90.17 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5465,7 +5470,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 87.63 90.17 0)
+			(at 90.17 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5473,16 +5478,16 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "27651882-5786-43d5-9cc0-58a0480250b1")
-		)
 		(pin "2"
-			(uuid "f0678549-15da-4551-adc7-b6fd4ef50345")
+			(uuid "6c92dd77-f99b-4ebd-9960-87e4094df7d0")
+		)
+		(pin "1"
+			(uuid "7b108531-2ece-4e5c-8715-2f14ca47c4d6")
 		)
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω2")
+					(reference "R_US3")
 					(unit 1)
 				)
 			)
@@ -5497,7 +5502,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da7f49a6-62db-4e60-87c5-1824fed0b8d8")
-		(property "Reference" "270Ω8"
+		(property "Reference" "R_US13"
 			(at 207.4672 109.3216 0)
 			(effects
 				(font
@@ -5506,7 +5511,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "270"
 			(at 207.4672 111.633 0)
 			(effects
 				(font
@@ -5515,7 +5520,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 206.756 110.744 90)
 			(effects
 				(font
@@ -5551,7 +5556,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω8")
+					(reference "R_US13")
 					(unit 1)
 				)
 			)
@@ -5623,6 +5628,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 95.25 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3cb14c9-67f4-4b6b-8aa0-8dba1217860c")
+		(property "Reference" "R_US5"
+			(at 96.9772 89.0016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "270"
+			(at 96.9772 91.313 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 96.266 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5b3b3a81-62dc-47e3-bd46-bf832ecf98a8")
+		)
+		(pin "1"
+			(uuid "6f472461-3f38-4249-b040-ed04378e74ca")
+		)
+		(instances
+			(project "gen2"
+				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
+					(reference "R_US5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 205.74 125.73 90)
 		(unit 1)
@@ -5631,7 +5707,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea47bbe8-74c9-4702-8f6e-7feb41d72fa4")
-		(property "Reference" "GREEN1"
+		(property "Reference" "LED1"
 			(at 200.2282 125.9078 0)
 			(effects
 				(font
@@ -5639,7 +5715,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "GREEN"
 			(at 202.5396 125.9078 0)
 			(effects
 				(font
@@ -5647,7 +5723,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O1.27mm_Z1.6mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 205.74 125.73 0)
 			(effects
 				(font
@@ -5683,7 +5759,7 @@
 		(instances
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "GREEN1")
+					(reference "LED1")
 					(unit 1)
 				)
 			)
@@ -5749,77 +5825,6 @@
 			(project "gen2"
 				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 92.71 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eb19d1b1-6055-4643-800f-acbba978b5b7")
-		(property "Reference" "270Ω4"
-			(at 94.4372 89.0016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R_US"
-			(at 94.4372 91.313 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 93.726 90.424 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 92.71 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "088a4896-f37f-4d94-a3fb-46c7d54f01d2")
-		)
-		(pin "2"
-			(uuid "26576c63-d71a-4e95-9416-ea43558c27e7")
-		)
-		(instances
-			(project "gen2"
-				(path "/a8ce1240-4e23-4393-8413-2914aee9e9e8/ec78402f-ec81-4957-93ee-fe8bcf4d0efb"
-					(reference "270Ω4")
 					(unit 1)
 				)
 			)

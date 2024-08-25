@@ -5,6 +5,170 @@
 	(uuid "a8ce1240-4e23-4393-8413-2914aee9e9e8")
 	(paper "A3")
 	(lib_symbols
+		(symbol "Conn_01x02_Socket_1"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J3"
+				(at -1.905 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Conn_01x02_Socket"
+				(at 0.635 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Socket_1_1_1"
+				(arc
+					(start 0 -2.032)
+					(mid -0.5058 -2.54)
+					(end 0 -3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0.508)
+					(mid -0.5058 0)
+					(end 0 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Conn_02x20_Row_Letter_Last_1"
 			(pin_names
 				(offset 1.016) hide)
@@ -1430,7 +1594,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "MyPartsLibrary:PinSocket_2x20_P2.54mm_1a-19a"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1448,7 +1612,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x20, row letter last pin numbering scheme (pin number consists of a letter for the row and a number for the pin index in this row. 1a, ..., Na; 1b, ..., Nb)), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1925,42 +2089,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 -25.4 0)
-					(length 3.81)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -25.4 180)
-					(length 3.81)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin passive line
@@ -2640,6 +2768,42 @@
 						)
 					)
 					(number "9b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -25.4 0)
+					(length 3.81)
+					(name "Pin_none_a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "none_a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -25.4 180)
+					(length 3.81)
+					(name "Pin_none_b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "none_b"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4091,6 +4255,12 @@
 		(uuid "09ba7bfb-c66a-4642-9582-e98b79467573")
 	)
 	(junction
+		(at 172.72 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1011dd80-fc16-4c7b-b305-c6f049d56e66")
+	)
+	(junction
 		(at 172.72 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4145,12 +4315,6 @@
 		(uuid "8a691e37-2837-4c71-8319-1196660710a8")
 	)
 	(junction
-		(at 172.72 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8bb5b781-bb09-4e9f-a497-6ce467ce3c8a")
-	)
-	(junction
 		(at 172.72 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4161,6 +4325,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bb4df521-a4cf-4bf3-b74c-2aa14323a849")
+	)
+	(junction
+		(at 172.72 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2f84f20-3e98-4881-8f3e-92dd6e37bee0")
 	)
 	(junction
 		(at 238.76 184.15)
@@ -4366,7 +4536,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 110.49) (xy 154.94 110.49)
+			(xy 138.43 115.57) (xy 154.94 115.57)
 		)
 		(stroke
 			(width 0)
@@ -4456,7 +4626,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 115.57) (xy 172.72 115.57)
+			(xy 138.43 118.11) (xy 172.72 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4646,6 +4816,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.43 120.65) (xy 172.72 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1dacc20-9ad0-485e-941e-63fc5a196b7d")
+	)
+	(wire
+		(pts
 			(xy 298.45 152.4) (xy 311.15 152.4)
 		)
 		(stroke
@@ -4776,7 +4956,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 110.49) (xy 154.94 140.97)
+			(xy 154.94 115.57) (xy 154.94 140.97)
 		)
 		(stroke
 			(width 0)
@@ -6074,6 +6254,7 @@
 		)
 	)
 	(symbol
+		(lib_name "Conn_01x02_Socket_1")
 		(lib_id "Connector:Conn_01x02_Socket")
 		(at 214.63 87.63 270)
 		(mirror x)
@@ -6101,7 +6282,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
 			(at 214.63 87.63 0)
 			(effects
 				(font
@@ -6277,7 +6458,7 @@
 		(pin "11b"
 			(uuid "0d5c1020-2168-435d-9208-1e681cf1b8bd")
 		)
-		(pin ""
+		(pin "none_b"
 			(uuid "d423efdd-788d-46de-a968-867ed8bd241b")
 		)
 		(pin "1b"
@@ -6298,7 +6479,7 @@
 		(pin "9a"
 			(uuid "10190b47-648c-45a4-8f61-b8df6e461d65")
 		)
-		(pin ""
+		(pin "none_a"
 			(uuid "20dea2ea-065f-4b67-9577-d26f5925a57a")
 		)
 		(pin "10b"
@@ -6530,7 +6711,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
 			(at 168.91 193.04 0)
 			(effects
 				(font
@@ -6904,8 +7085,8 @@
 		)
 	)
 	(sheet
-		(at 116.84 106.68)
-		(size 21.59 12.7)
+		(at 116.84 113.03)
+		(size 21.59 10.16)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -6916,7 +7097,7 @@
 		)
 		(uuid "e60b34d4-244b-4723-9440-93f5b167882c")
 		(property "Sheetname" "pin_button"
-			(at 116.84 105.9684 0)
+			(at 116.84 112.3184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6925,7 +7106,7 @@
 			)
 		)
 		(property "Sheetfile" "pin_button.kicad_sch"
-			(at 116.84 119.9646 0)
+			(at 116.84 123.7746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6933,8 +7114,8 @@
 				(justify left top)
 			)
 		)
-		(pin "button" input
-			(at 138.43 115.57 0)
+		(pin "start_button" input
+			(at 138.43 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6944,7 +7125,7 @@
 			(uuid "ee67fac9-5af5-4095-acfa-eb1f828c9091")
 		)
 		(pin "buzzer" input
-			(at 138.43 110.49 0)
+			(at 138.43 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6952,6 +7133,16 @@
 				(justify right)
 			)
 			(uuid "aa0d295b-fa3f-4c7e-b440-e20b51bc6564")
+		)
+		(pin "select_button" input
+			(at 138.43 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7de10dba-3fd1-4753-8e15-8a9ed6964d81")
 		)
 		(instances
 			(project "gen2"
@@ -6962,8 +7153,8 @@
 		)
 	)
 	(sheet
-		(at 116.84 125.73)
-		(size 21.59 13.97)
+		(at 116.84 128.27)
+		(size 21.59 10.16)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -6974,7 +7165,7 @@
 		)
 		(uuid "ec78402f-ec81-4957-93ee-fe8bcf4d0efb")
 		(property "Sheetname" "7seg_led"
-			(at 116.84 125.0184 0)
+			(at 116.84 127.5584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6983,7 +7174,7 @@
 			)
 		)
 		(property "Sheetfile" "7seg_led.kicad_sch"
-			(at 116.84 140.2846 0)
+			(at 116.84 139.0146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
