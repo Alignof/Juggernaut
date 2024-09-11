@@ -13,14 +13,18 @@ bool timer_stop	= true;
 SignalColor signal = YELLOW;
 EventGroupHandle_t eg_handle;
 
-volatile int minits = time_remain / 60;
-volatile int second = time_remain % 60;
+volatile int time_remain = 0;
+volatile int minits = 0;
+volatile int second = 0;
 
 // Timer
 // ref: https://docs.espressif.com/projects/arduino-esp32/en/latest/api/timer.html
 // ref: https://lang-ship.com/blog/work/esp32-timer/
 hw_timer_t *timer = NULL;
 portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
+
+// prototype declaration to prevent typedef error
+void data_send(int digit, int num, SignalColor rgb);
 
 // called every second.
 void IRAM_ATTR onTimer() {
@@ -95,6 +99,8 @@ void loop() {
 }
 
 void setup() {
+    int challenge_id = 0;
+    struct Challenge *challenge = NULL;
 	eg_handle = xEventGroupCreate();
 
 	pinMode(SER, OUTPUT);
@@ -102,6 +108,7 @@ void setup() {
 	pinMode(SRCLK, OUTPUT);
 	pinMode(BUZZER, OUTPUT);
 	pinMode(SYSSW, INPUT);
+	pinMode(SELECTSW, INPUT);
 
     // Use 1st timer of 4 (counted from zero).
     // Set 80 divider for prescaler (see ESP32 Technical Reference Manual for more
@@ -116,11 +123,24 @@ void setup() {
     timerAlarmEnable(timer);
 
 	data_send(5, DIGIT_NONE, YELLOW);
-	setup_pin();
+	data_send(1, challenge_id, YELLOW);
 
-	while(digitalRead(SYSSW) == HIGH);
+    // select challenge number
+	while(digitalRead(SYSSW) == HIGH) {
+        if (digitalRead(SELECTSW) == LOW) {
+            challenge_id++;
+            if (challenge_id == CHALLENGES_NUM) challenge_id = 0;
 
-	xTaskCreatePinnedToCore(gaming, "gaming", 8192, NULL, 1, NULL, 1);
+	        data_send(1, challenge_id, YELLOW);
+
+            delay(1000);
+        }
+    };
+
+    challenge = challenges[challenge_id];
+    challenge->setup_pin();
+    time_remain = challenge->time_limit;
+	xTaskCreatePinnedToCore(challenge->gaming, "gaming", 8192, NULL, 1, NULL, 1);
 	xTaskCreatePinnedToCore(display, "display", 8192, NULL, 1, NULL, 1);
 	delay(100);
 }
@@ -129,7 +149,8 @@ void data_send(int digit, int num, SignalColor rgb) {
 	int i;
 	uint16_t data;
 	int seg[12] = {
-        0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x03, 0x00
+        0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, // 0 - 9
+        0x03, 0x00 // coron, none
     };
 
 	/*

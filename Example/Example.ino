@@ -10,7 +10,16 @@
 #include "freertos/event_groups.h"
 #include "freertos/task.h"
 
-#define CHALLENGES_NUM 1
-void (* challenges[CHALLENGES_NUM]) (void *) = {
-    &red_or_blue,
+struct Challenge {
+    void (* gaming)(void *);
+    void (* setup_pin)(void);
+    int time_limit;
+};
+
+#define CHALLENGES_NUM 2
+extern struct Challenge RedOrBlue;
+extern struct Challenge RedOrBlue2;
+struct Challenge *challenges[CHALLENGES_NUM] = {
+    &RedOrBlue,
+    &RedOrBlue2,
 };

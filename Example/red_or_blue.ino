@@ -1,18 +1,18 @@
-#include "control.h"
-#include "freertos/event_groups.h"
-#include "freertos/task.h"
-
 //=============================================================================
 //  START of giver code (copy the below code you wrote into the specification)
 //=============================================================================
 
-volatile int time_remain = 300;
+struct Challenge RedOrBlue = {
+    .gaming = red_or_blue,
+    .setup_pin = setup_rob,
+    .time_limit = 300,
+};
 
 // giver pin assgin
 const uint8_t RED_WIRE = 23;
 const uint8_t BLUE_WIRE = 18;
 
-void setup_pin(void) {
+void setup_rob(void) {
 	pinMode(RED_WIRE,  INPUT_PULLUP);
 	pinMode(BLUE_WIRE, INPUT_PULLUP);
 }

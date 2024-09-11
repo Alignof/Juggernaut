@@ -3,7 +3,7 @@
 //=============================================================================
 
 struct Challenge RedOrBlue2 = {
-    .gaming = red_or_blue,
+    .gaming = red_or_blue_2,
     .setup_pin = setup_rob2,
     .time_limit = 300,
 };
