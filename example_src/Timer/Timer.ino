@@ -14,7 +14,7 @@
 //  START of giver code (copy the below code you wrote into the specification)
 //=============================================================================
 
-int time_limit = 300;
+int time_remain = 300;
 
 // giver pin assgin
 const uint8_t NAVY_BUTTON  = 22;
