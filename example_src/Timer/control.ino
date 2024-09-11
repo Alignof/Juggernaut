@@ -9,28 +9,30 @@
 const uint8_t DIGIT_CORON = 10;
 const uint8_t DIGIT_NONE = 11;
 
-bool timer_stop	= false;
+bool timer_stop	= true;
 SignalColor signal = YELLOW;
 EventGroupHandle_t eg_handle;
 
+volatile int minits = time_remain / 60;
+volatile int second = time_remain % 60;
+
 // Timer
 // ref: https://docs.espressif.com/projects/arduino-esp32/en/latest/api/timer.html
-// ref: https://qiita.com/ekzemplaro/items/02ad917bf63a7790fc7d
+// ref: https://lang-ship.com/blog/work/esp32-timer/
 hw_timer_t *timer = NULL;
-volatile SemaphoreHandle_t timerSemaphore;
 portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
-volatile uint32_t isrCounter = 0;
-volatile uint32_t lastIsrAt = 0;
 
-void ARDUINO_ISR_ATTR onTimer() {
-    // Increment the counter and set the time of ISR
-    portENTER_CRITICAL_ISR(&timerMux);
-    isrCounter++;
-    lastIsrAt = millis();
-    portEXIT_CRITICAL_ISR(&timerMux);
-    // Give a semaphore that we can check in the loop
-    xSemaphoreGiveFromISR(timerSemaphore, NULL);
-    // It is safe to use digitalRead/Write here if you want to toggle an output
+// called every second.
+void IRAM_ATTR onTimer() {
+    if (!timer_stop) {
+        digitalWrite(BUZZER, HIGH);
+
+        portENTER_CRITICAL_ISR(&timerMux);
+        time_remain--;
+        minits = time_remain / 60;
+        second = time_remain % 60;
+        portEXIT_CRITICAL_ISR(&timerMux);
+    }
 }
 
 void succeeded(void) {
@@ -51,18 +53,31 @@ void failed(void) {
 }
 
 void display(void *pvParameters) {
-	long long minits, second;
-
+    bool buzzer_stop = false;
+    timer_stop = false;
 	minits = time_remain / 60;
 	second = time_remain % 60;
 
-	while(time_remain > 0) {
-        // Timer has fired
-        if (!timer_stop && xSemaphoreTake(timerSemaphore, 0) == pdTRUE) {
-            time_remain--;
-            minits = time_remain / 60;
-            second = time_remain % 60;
-			digitalWrite(BUZZER, HIGH);
+	while(1) {
+        if (time_remain <= 0) {
+            // If timer is still running
+            if (timer) {
+                // Stop and free timer
+                timerEnd(timer);
+                timer = NULL;
+            }
+
+            signal = RED;
+
+            if (digitalRead(SYSSW) == LOW) {
+                buzzer_stop = true;
+            }
+
+            if (buzzer_stop) {
+                digitalWrite(BUZZER, LOW);
+            } else {
+                digitalWrite(BUZZER, HIGH);
+            }
         } else {
             digitalWrite(BUZZER, LOW);
         }
@@ -72,20 +87,6 @@ void display(void *pvParameters) {
 		data_send(5, 10, signal);
 		data_send(2, (second / 10) % 10, signal);
 		data_send(1, second % 10, signal);
-	}
-
-	// time over
-	signal = RED;
-	digitalWrite(BUZZER, HIGH);
-	while(1) {
-		data_send(5, DIGIT_CORON, signal);
-		for(int i = 1; i <= 4; i++) {
-			data_send(i, 0, signal);
-		}
-
-		if(digitalRead(SYSSW) == LOW) {
-			digitalWrite(BUZZER, LOW);
-		}
 	}
 }
 
@@ -102,8 +103,6 @@ void setup() {
 	pinMode(BUZZER, OUTPUT);
 	pinMode(SYSSW, INPUT);
 
-    // Create semaphore to inform us when the timer has fired
-    timerSemaphore = xSemaphoreCreateBinary();
     // Use 1st timer of 4 (counted from zero).
     // Set 80 divider for prescaler (see ESP32 Technical Reference Manual for more
     // info).
