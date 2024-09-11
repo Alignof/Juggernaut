@@ -1,11 +1,3 @@
-/*
- * @date		2020 10/31-
- * @code name	Juggernaut
- * @author		Takana Norimasa <Alignof@outlook.com>
- * @brief		Educational bomb disposal game
- * @repository	https://github.com/Alignof/Juggernaut
- */
-
 #include "control.h"
 #include "freertos/event_groups.h"
 #include "freertos/task.h"
@@ -25,7 +17,7 @@ void setup_pin(void) {
 	pinMode(BLUE_WIRE, INPUT_PULLUP);
 }
 
-void gaming(void *pvParameters) {
+void red_or_blue(void *pvParameters) {
 	bool flag1 = false;
 	bool flag2 = false;
 
