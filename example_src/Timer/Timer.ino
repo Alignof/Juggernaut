@@ -17,39 +17,30 @@
 volatile int time_remain = 300;
 
 // giver pin assgin
-const uint8_t NAVY_BUTTON  = 22;
-const uint8_t WHITE_BUTTON = 18;
-const uint8_t RED_BUTTON   = 19;
-const uint8_t BLUE_BUTTON  = 23;
+const uint8_t RED_WIRE = 23;
+const uint8_t BLUE_WIRE = 18;
 
 void setup_pin(void) {
-	pinMode(NAVY_BUTTON, INPUT_PULLUP);
-	pinMode(WHITE_BUTTON, INPUT_PULLUP);
-	pinMode(RED_BUTTON, INPUT_PULLUP);
-	pinMode(BLUE_BUTTON, INPUT_PULLUP);
+	pinMode(RED_WIRE,  INPUT_PULLUP);
+	pinMode(BLUE_WIRE, INPUT_PULLUP);
 }
 
 void gaming(void *pvParameters) {
 	bool flag1 = false;
 	bool flag2 = false;
-	bool flag3 = false;
-	bool flag4 = false;
 
 	while(1) {
-		delay(1);
-		flag1 = (digitalRead(NAVY_BUTTON) == LOW);
-		flag2 = (digitalRead(WHITE_BUTTON) == HIGH);
-		flag3 = (digitalRead(BLUE_BUTTON) == LOW);
-		flag4 = (digitalRead(RED_BUTTON) == HIGH);
-
+		flag1 = (digitalRead(RED_WIRE)  == HIGH);
+		flag2 = (digitalRead(BLUE_WIRE) == HIGH);
+		
 		// succeeded
-		if(flag1 && flag2 && flag3) {
-			succeeded();
+		if(flag1) {
+            succeeded();
 		}
 
 		// failed
-		if(!flag4) {
-			failed();
+		if(flag2) {
+            failed();
 		}
 	}
 }
