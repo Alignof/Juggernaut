@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "gen2-cache")(type "Legacy")(uri "${KIPRJMOD}/gen2-cache.lib")(options "")(descr ""))
+)

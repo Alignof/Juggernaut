@@ -3,6 +3,7 @@
 #define SRCLK	 25
 #define BUZZER	 12
 #define SYSSW	 39
+#define SELECTSW 34
 #define DATASIZE 16
 
 typedef enum {
