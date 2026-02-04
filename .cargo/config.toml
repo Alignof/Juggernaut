@@ -1,0 +1,11 @@
+[target.thumbv8m.main-none-eabihf]
+runner = "probe-rs run --chip RP235x --protocol swd"
+#runner = "sudo picotool load -u -v -x -t elf"
+
+[env]
+DEFMT_LOG = "debug"
+
+[build]
+rustflags = ["-C", "link-arg=--nmagic", "-C", "link-arg=-Tdefmt.x"]
+
+target = "thumbv8m.main-none-eabihf"

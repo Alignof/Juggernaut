@@ -1,0 +1,38 @@
+[package]
+name = "Juggernaut"
+version = "0.1.0"
+edition = "2024"
+
+[lints.clippy]
+pedantic = "warn"
+missing_docs_in_private_items = "warn"
+
+[lints.rust]
+missing_docs = "warn"
+
+[lints.rustdoc]
+missing_crate_level_docs = "warn"
+
+[dependencies]
+defmt = "1"
+defmt-rtt = "1"
+embedded-alloc = "0.7.0"
+embedded-hal = "1.0.0"
+embassy-time = "0.5"
+embassy-rp = { version = "0.9", features = [
+  "defmt",
+  "rp235xa",
+  "critical-section-impl",
+  "rp235xa",
+  "binary-info",
+  "time-driver",
+] }
+embassy-executor = { version = "0.9.0", features = [
+  "arch-cortex-m",
+  "executor-thread",
+  "executor-interrupt",
+  "defmt",
+] }
+cortex-m-rt = "0.7.0"
+panic-halt = "0.2.0"
+embassy-sync = "0.7.2"

@@ -30,3 +30,8 @@ fp-info-cache
 
 # My pattern
 ~_autosave-*
+
+
+# Added by cargo
+
+/target
