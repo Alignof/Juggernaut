@@ -1,10 +1,21 @@
-//! Juggernaut Gen3
+//! The firmware for Juggernaut Gen3
 //!
-//! This code is a firmware for Juggernaut Gen3
+//! # Pin assign
+//! | name                  | pin number |
+//! |-----------------------|------------|
+//! | Buzzer                | 28         |
+//! | Shift Register SER    | 27         |
+//! | Shift Register RCLK   | 26         |
+//! | Shift Register SRCLK  | 22         |
+//! | Start Switch          | 20         |
+//! | Select Switch         | 21         |
 
 #![no_std]
 #![no_main]
 
+mod display;
+
+use defmt_rtt as _;
 use embassy_executor::Spawner;
 use embassy_rp::gpio::{Input, Level, Output, Pull};
 use embassy_sync::blocking_mutex::raw::ThreadModeRawMutex;
@@ -12,59 +23,29 @@ use embassy_sync::mutex::Mutex;
 use embassy_time::{Duration, Ticker, Timer};
 use panic_halt as _;
 
-const DATASIZE: usize = 16;
-const DIGIT_CORON: u8 = 10;
-const DIGIT_NONE: u8 = 11;
+use display::{ShiftRegister, SignalColor};
 
-#[derive(Clone, Copy)]
-enum SignalColor {
-    Red,
-    Yellow,
-    Green,
-}
-
-struct GameState {
+/// Represents the current global state of timer
+struct TimerState {
+    /// Remaining time in seconds.
     time_remain: i32,
+    /// Current color of the signal LED.
     signal: SignalColor,
+    /// Whether the countdown timer is paused.
     timer_stop: bool,
 }
 
-static STATE: Mutex<ThreadModeRawMutex, GameState> = Mutex::new(GameState {
+/// Global shared state protected by a Mutex for safe access across tasks.
+static STATE: Mutex<ThreadModeRawMutex, TimerState> = Mutex::new(TimerState {
     time_remain: 0,
     signal: SignalColor::Yellow,
     timer_stop: true,
 });
 
-struct ShiftRegister {
-    ser: Output<'static>,
-    rclk: Output<'static>,
-    srclk: Output<'static>,
-}
-
-impl ShiftRegister {
-    async fn data_send(&mut self, digit: u8, num: u8, rgb: SignalColor) {
-        let seg = [
-            0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, // 0 - 9
-            0x03, 0x00, // colon, none
-        ];
-
-        let data: u16 = (1 << (digit + 10)) | (1 << (rgb as u8 + 8)) | (seg[num as usize]);
-
-        self.rclk.set_low();
-        for i in 0..DATASIZE {
-            if (data >> i) & 1 == 1 {
-                self.ser.set_high();
-            } else {
-                self.ser.set_low();
-            }
-            self.srclk.set_low();
-            self.srclk.set_high();
-        }
-        self.rclk.set_high();
-        Timer::after_millis(1).await;
-    }
-}
-
+/// Task that handles the 1-second interval countdown and buzzer alerts.
+///
+/// # Arguments
+/// * `buzzer` - The GPIO output pin connected to the buzzer.
 #[embassy_executor::task]
 async fn timer_task(mut buzzer: Output<'static>) {
     let mut ticker = Ticker::every(Duration::from_secs(1));
@@ -76,12 +57,17 @@ async fn timer_task(mut buzzer: Output<'static>) {
             buzzer.set_high();
             state.time_remain -= 1;
             // Short beep logic could be added here
-            Timer::after_millis(100).await;
+            Timer::after_millis(10).await;
             buzzer.set_low();
         }
     }
 }
 
+/// Task that manages the 7-segment display via shift registers.
+/// Updates the display based on the current `GameState`.
+///
+/// # Arguments
+/// * `shift_reg` - The shift register controller for the display.
 #[embassy_executor::task]
 async fn display_task(mut shift_reg: ShiftRegister) {
     loop {
@@ -92,34 +78,39 @@ async fn display_task(mut shift_reg: ShiftRegister) {
 
         if remain <= 0 {
             // Logic for when time is up
-            shift_reg.data_send(4, 0, signal).await; // Simplified for brevity
+            shift_reg.data_send(4, 0, signal).await;
+            shift_reg.data_send(3, 0, signal).await;
+            shift_reg.coron_send(signal).await;
+            shift_reg.data_send(2, 0, signal).await;
+            shift_reg.data_send(1, 0, signal).await;
         } else {
             let minutes = (remain / 60) as u8;
             let seconds = (remain % 60) as u8;
 
             shift_reg.data_send(4, minutes / 10, signal).await;
             shift_reg.data_send(3, minutes % 10, signal).await;
-            shift_reg.data_send(5, DIGIT_CORON, signal).await;
+            shift_reg.coron_send(signal).await;
             shift_reg.data_send(2, seconds / 10, signal).await;
             shift_reg.data_send(1, seconds % 10, signal).await;
         }
     }
 }
 
-// --- Main ---
+/// Main entry point for the Embassy executor.
+/// Initializes peripherals and spawns background tasks.
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     let p = embassy_rp::init(Default::default());
 
     // Pin setup
-    let shift_reg = ShiftRegister {
-        ser: Output::new(p.PIN_27, Level::Low),
-        rclk: Output::new(p.PIN_26, Level::Low),
-        srclk: Output::new(p.PIN_25, Level::Low),
-    };
-    let buzzer = Output::new(p.PIN_12, Level::Low);
-    let sys_sw = Input::new(p.PIN_10, Pull::Up);
-    let select_sw = Input::new(p.PIN_11, Pull::Up);
+    let shift_reg = ShiftRegister::new(
+        Output::new(p.PIN_27, Level::Low), // SER
+        Output::new(p.PIN_26, Level::Low), // RCLK
+        Output::new(p.PIN_22, Level::Low), // SRCLK
+    );
+    let buzzer = Output::new(p.PIN_28, Level::Low);
+    let start_sw = Input::new(p.PIN_20, Pull::Up);
+    let select_sw = Input::new(p.PIN_21, Pull::Up);
 
     // Initial display
     spawner.spawn(display_task(shift_reg)).unwrap();
@@ -129,7 +120,7 @@ async fn main(spawner: Spawner) {
     let challenges_num = 2;
 
     // Challenge selection loop
-    while sys_sw.is_high() {
+    while start_sw.is_high() {
         if select_sw.is_low() {
             challenge_id = (challenge_id + 1) % challenges_num;
             // Update state to reflect selection if needed
