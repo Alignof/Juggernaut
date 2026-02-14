@@ -12,6 +12,7 @@
 *.sch-bak
 *~
 _autosave-*
+*autosaved*
 *.tmp
 *-save.pro
 *-save.kicad_pcb
@@ -30,6 +31,9 @@ fp-info-cache
 
 # My pattern
 ~_autosave-*
+\#auto_saved_files#
+~gen3.*.lck
+~gen2.*.lck
 
 
 # Added by cargo
