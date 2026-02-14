@@ -2847,8 +2847,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "A"
-				(at -19.05 35.56 0)
+			(property "Reference" "A1"
+				(at 2.1433 -34.29 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2857,7 +2857,7 @@
 				)
 			)
 			(property "Value" "RaspberryPi_Pico"
-				(at 7.62 35.56 0)
+				(at 2.1433 -36.83 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3743,7 +3743,7 @@
 					(alternate "UART1_CTS" input line)
 					(alternate "USB_VBUS_DET" input line)
 				)
-				(pin power_in line
+				(pin passive line
 					(at 22.86 -7.62 180)
 					(length 3.81)
 					(name "ADC_VREF"
@@ -3854,6 +3854,89 @@
 						)
 					)
 					(alternate "GND" passive line)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
 				)
 			)
 			(embedded_fonts no)
@@ -4043,131 +4126,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GNDPWR"
 			(power)
 			(pin_names
@@ -4338,6 +4296,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 158.75 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "05a3db3c-417f-4a8b-b188-904d3fee2a19")
 	)
 	(junction
 		(at 163.83 133.35)
@@ -4346,14 +4411,14 @@
 		(uuid "57c5e093-1d03-4e8f-ad06-8e6d892959a9")
 	)
 	(junction
-		(at 158.75 50.8)
+		(at 158.75 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ca33dc24-6b1e-4a32-97a6-209294e5b96e")
+		(uuid "cd85e6ce-3e60-47d6-9802-9d951a73863b")
 	)
 	(no_connect
-		(at 222.25 123.19)
-		(uuid "b42c1527-5800-41c8-b30b-2129f33ca531")
+		(at 163.83 44.45)
+		(uuid "15f3f31d-d66f-4b06-8b7c-1735f2164bbf")
 	)
 	(wire
 		(pts
@@ -4667,6 +4732,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 48.26) (xy 158.75 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c2688d1-8aac-4b41-a060-2f6c9bc46d63")
+	)
+	(wire
+		(pts
 			(xy 172.72 133.35) (xy 163.83 133.35)
 		)
 		(stroke
@@ -4797,16 +4872,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 44.45) (xy 158.75 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0fdb5e3-cf1d-493f-be54-c7823b0de947")
-	)
-	(wire
-		(pts
 			(xy 110.49 78.74) (xy 123.19 78.74)
 		)
 		(stroke
@@ -4824,6 +4889,16 @@
 			(type default)
 		)
 		(uuid "b9e6d059-2085-4b00-ba9a-51681aa1469f")
+	)
+	(wire
+		(pts
+			(xy 158.75 48.26) (xy 158.75 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6a34abb-80b2-4d3d-b44e-c2ad9cfdc2ae")
 	)
 	(wire
 		(pts
@@ -4867,7 +4942,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 50.8) (xy 158.75 54.61)
+			(xy 158.75 44.45) (xy 158.75 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4937,7 +5012,17 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 50.8) (xy 158.75 50.8)
+			(xy 158.75 52.07) (xy 158.75 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8124e07-97cb-4a20-a3b0-9981209e8b56")
+	)
+	(wire
+		(pts
+			(xy 154.94 52.07) (xy 158.75 52.07)
 		)
 		(stroke
 			(width 0)
@@ -5146,7 +5231,7 @@
 		(uuid "359088fc-9e87-4a59-bf26-e91b6db25423")
 	)
 	(label "Pin39"
-		(at 154.94 50.8 180)
+		(at 154.94 52.07 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5284,6 +5369,16 @@
 			(justify left bottom)
 		)
 		(uuid "7686abd6-062d-424e-9440-87c8a51fc72b")
+	)
+	(label "Pin36"
+		(at 73.66 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "76a67079-882e-4fdc-b942-e6dbadb09e50")
 	)
 	(label "Pin10"
 		(at 140.97 95.25 180)
@@ -5846,7 +5941,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MyPartsLibrary:PinSocket_2x20_P2.54mm_20a_38a"
+		(property "Footprint" "MyParts:PinSocket_2x20_P2.54mm_20a_40a"
 			(at 214.63 100.33 0)
 			(effects
 				(font
@@ -6003,34 +6098,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 73.66 111.76 0)
+		(lib_id "Mechanical:MountingHole")
+		(at 48.26 163.83 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "316f7766-07f6-4a2c-9d47-c0956c9d19cd")
-		(property "Reference" "#PWR02"
-			(at 73.66 115.57 0)
+		(uuid "0e79b017-071e-4dda-8783-82cfecccc3c6")
+		(property "Reference" "H1"
+			(at 50.8 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 73.66 106.68 0)
+		(property "Value" "MountingHole"
+			(at 50.8 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 73.66 111.76 0)
+			(at 48.26 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6038,8 +6134,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 73.66 111.76 0)
+		(property "Datasheet" "~"
+			(at 48.26 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6047,22 +6143,83 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 73.66 111.76 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 48.26 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "cc1b8129-60a2-41aa-83c8-1b031b12c6be")
 		)
 		(instances
 			(project ""
 				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
-					(reference "#PWR02")
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 48.26 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0f489d8c-ae92-40c6-a26d-f925f19854f5")
+		(property "Reference" "H3"
+			(at 50.8 172.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 50.8 175.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 48.26 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "gen3"
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -6134,6 +6291,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 72.39 163.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40826b20-17ef-40d6-827d-d0e4d04fec1a")
+		(property "Reference" "H2"
+			(at 74.93 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 74.93 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 72.39 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 72.39 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "gen3"
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Jack-DC")
 		(at 158.75 22.86 270)
 		(unit 1)
@@ -6161,7 +6382,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_Horizontal"
 			(at 157.734 24.13 0)
 			(effects
 				(font
@@ -6204,6 +6425,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 140.97 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4afc4ada-6360-4a8e-a11d-885e59155c08")
+		(property "Reference" "#FLG03"
+			(at 140.97 46.355 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 140.97 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b1b27bf-df8b-40b0-be45-34ae4dfa4379")
+		)
+		(instances
+			(project ""
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "MCU_Module:RaspberryPi_Pico")
 		(at 163.83 92.71 0)
 		(unit 1)
@@ -6231,7 +6518,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
+		(property "Footprint" "Module:RaspberryPi_Pico_Common_THT"
 			(at 163.83 139.7 0)
 			(effects
 				(font
@@ -6478,7 +6765,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MyPartsLibrary:PinSocket_2x20_P2.54mm_1a-19a"
+		(property "Footprint" "MyParts:PinSocket_2x20_P2.54mm_1a-20a"
 			(at 118.11 93.98 0)
 			(effects
 				(font
@@ -6769,6 +7056,70 @@
 			(project ""
 				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 72.39 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6c8a46d-12c3-431b-a55d-0f1cef3bd22c")
+		(property "Reference" "H4"
+			(at 74.93 172.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 74.93 175.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 72.39 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 72.39 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "gen3"
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
+					(reference "H4")
 					(unit 1)
 				)
 			)

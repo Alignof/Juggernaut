@@ -2241,6 +2241,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 74.93 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "16835e16-4ffc-4401-a6cb-21de485ac230")
 	)
 	(junction
 		(at 144.78 115.57)
@@ -2626,7 +2733,37 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 110.49) (xy 74.93 115.57)
+			(xy 74.93 113.03) (xy 74.93 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79b936ce-d208-415d-9857-888a0b72ba20")
+	)
+	(wire
+		(pts
+			(xy 66.04 110.49) (xy 66.04 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a9c3dfa-3166-4b6b-9f99-3406e40ffadc")
+	)
+	(wire
+		(pts
+			(xy 66.04 113.03) (xy 74.93 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "847e14fc-ee43-41ae-922f-285af43ef864")
+	)
+	(wire
+		(pts
+			(xy 74.93 110.49) (xy 74.93 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2706,6 +2843,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 110.49) (xy 144.78 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98494add-e37e-4ee2-9ca7-3c835923170b")
+	)
+	(wire
+		(pts
 			(xy 167.64 125.73) (xy 167.64 140.97)
 		)
 		(stroke
@@ -2773,16 +2920,6 @@
 			(type default)
 		)
 		(uuid "abf43b27-a646-48e9-a285-22f784a0f134")
-	)
-	(wire
-		(pts
-			(xy 144.78 115.57) (xy 144.78 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aee8e24c-b261-48cb-a54e-b93e5e424621")
 	)
 	(wire
 		(pts
@@ -4932,6 +5069,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 66.04 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab8c39b7-7264-44c1-bb2c-6a63ef8a3582")
+		(property "Reference" "#FLG02"
+			(at 66.04 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 66.04 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 66.04 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 66.04 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0cbe9ea6-62bc-4e14-93db-64232d7f6e44")
+		)
+		(instances
+			(project "gen3"
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc/5dfef49a-9007-4b14-a530-e7b7a9c1e25f"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 92.71 97.79 0)
 		(unit 1)
@@ -5095,7 +5298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "FJ5462AH:LED-SEG-TH_12P-L50.3-W19.0-P2.54-S15.24-BL"
+		(property "Footprint" "MyParts:FJ5462AH"
 			(at 125.73 62.23 0)
 			(effects
 				(font

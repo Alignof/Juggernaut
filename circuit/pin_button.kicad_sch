@@ -1422,12 +1422,119 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 194.31 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2295c607-7509-4b02-9597-3a86cddd928f")
+	)
+	(junction
+		(at 194.31 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ee84285-1600-46bf-9238-4839389a1e9c")
 	)
 	(junction
 		(at 194.31 72.39)
@@ -1559,6 +1666,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 69.85) (xy 201.93 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99f21695-e00b-41ed-8538-f4bbd3e145eb")
+	)
+	(wire
+		(pts
 			(xy 116.84 85.09) (xy 116.84 93.98)
 		)
 		(stroke
@@ -1579,7 +1696,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 69.85) (xy 194.31 72.39)
+			(xy 194.31 69.85) (xy 194.31 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1619,6 +1736,16 @@
 	)
 	(wire
 		(pts
+			(xy 194.31 71.12) (xy 194.31 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd958172-f229-4efa-aa4a-e436b0a430eb")
+	)
+	(wire
+		(pts
 			(xy 194.31 82.55) (xy 194.31 83.82)
 		)
 		(stroke
@@ -1646,6 +1773,16 @@
 			(type default)
 		)
 		(uuid "f4ed965b-db04-4f3f-b4ec-a8f1cc68a252")
+	)
+	(wire
+		(pts
+			(xy 201.93 71.12) (xy 194.31 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7de6496-553e-45ab-b591-c5f53c6d611e")
 	)
 	(hierarchical_label "select_button"
 		(shape input)
@@ -1944,6 +2081,72 @@
 			(project "gen3"
 				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc/a6a603d2-5a16-46d3-94ac-e9e8583c5e5b"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 201.93 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3059506c-c063-4f95-8bb1-3b6998f7cbd0")
+		(property "Reference" "#FLG04"
+			(at 201.93 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 201.93 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 201.93 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1407007-5bdd-4320-a557-eda39f9e328b")
+		)
+		(instances
+			(project ""
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc/a6a603d2-5a16-46d3-94ac-e9e8583c5e5b"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -2620,7 +2823,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
 			(at 121.92 99.06 0)
 			(effects
 				(font
