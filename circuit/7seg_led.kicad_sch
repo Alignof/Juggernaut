@@ -3818,7 +3818,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "39166677-c973-49b9-8507-911ccd993eb4")
-		(property "Reference" "primary1"
+		(property "Reference" "U1"
 			(at 181.4576 114.4016 90)
 			(effects
 				(font
@@ -3914,7 +3914,7 @@
 		(instances
 			(project "gen3"
 				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc/5dfef49a-9007-4b14-a530-e7b7a9c1e25f"
-					(reference "primary1")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -4331,7 +4331,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7551beff-e193-4668-b776-330c0f20f9d7")
-		(property "Reference" "secondary1"
+		(property "Reference" "U2"
 			(at 111.6076 114.4016 90)
 			(effects
 				(font
@@ -4427,7 +4427,7 @@
 		(instances
 			(project "gen3"
 				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc/5dfef49a-9007-4b14-a530-e7b7a9c1e25f"
-					(reference "secondary1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
