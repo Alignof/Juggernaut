@@ -4582,6 +4582,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 130.81) (xy 72.39 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42210b12-131d-4ba9-bc17-59dfb0fc1368")
+	)
+	(wire
+		(pts
 			(xy 209.55 100.33) (xy 222.25 100.33)
 		)
 		(stroke
@@ -4659,6 +4669,16 @@
 			(type default)
 		)
 		(uuid "683a9e4a-e343-4603-9c31-e5d3e912a3a9")
+	)
+	(wire
+		(pts
+			(xy 72.39 133.35) (xy 73.66 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f20b455-153c-4c38-9d43-b23f7549376c")
 	)
 	(wire
 		(pts
@@ -4872,6 +4892,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 128.27) (xy 73.66 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4e7595e-1d57-4182-89a6-257b24da283c")
+	)
+	(wire
+		(pts
 			(xy 110.49 78.74) (xy 123.19 78.74)
 		)
 		(stroke
@@ -4959,6 +4989,16 @@
 			(type default)
 		)
 		(uuid "d53cf990-8851-4582-b567-625860adc252")
+	)
+	(wire
+		(pts
+			(xy 73.66 133.35) (xy 73.66 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8367266-be9d-4fd4-b1d5-82cd5f22450c")
 	)
 	(wire
 		(pts
@@ -5090,7 +5130,7 @@
 		)
 		(uuid "09075801-4ee7-4989-abea-fda1dc657245")
 	)
-	(label "Pin23"
+	(label "Pin24"
 		(at 83.82 77.47 0)
 		(effects
 			(font
@@ -5220,6 +5260,16 @@
 		)
 		(uuid "2a81615e-d597-4ea9-b1b5-f9727c02e7e7")
 	)
+	(label "Pin29"
+		(at 73.66 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "346f09df-5f98-485b-9dc7-d922c5de9bbd")
+	)
 	(label "Pin22"
 		(at 209.55 77.47 180)
 		(effects
@@ -5280,7 +5330,7 @@
 		)
 		(uuid "51ed17b2-a203-4ba8-824a-bb8eb2119293")
 	)
-	(label "Pin24"
+	(label "Pin25"
 		(at 83.82 91.44 0)
 		(effects
 			(font
@@ -5300,7 +5350,7 @@
 		)
 		(uuid "57aceb5c-1455-4607-98e9-a5ada4d4bf90")
 	)
-	(label "Pin26"
+	(label "Pin27"
 		(at 83.82 96.52 0)
 		(effects
 			(font
@@ -5600,7 +5650,7 @@
 		)
 		(uuid "b176501a-2f86-4760-8e0e-babb7f7face5")
 	)
-	(label "Pin25"
+	(label "Pin26"
 		(at 83.82 93.98 0)
 		(effects
 			(font
@@ -6125,7 +6175,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
 			(at 48.26 163.83 0)
 			(effects
 				(font
@@ -6189,7 +6239,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
 			(at 48.26 173.99 0)
 			(effects
 				(font
@@ -6220,6 +6270,71 @@
 			(project "gen3"
 				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
 					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 73.66 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0f5e343a-bb61-4632-9eec-820ab4be54d7")
+		(property "Reference" "#PWR02"
+			(at 73.66 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 73.7616 138.5316 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3dacacd-1624-450c-a3ce-472cfb8d3645")
+		)
+		(instances
+			(project "gen3"
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -6318,7 +6433,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
 			(at 72.39 163.83 0)
 			(effects
 				(font
@@ -6989,6 +7104,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 67.31 133.35 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9e8fd20c-4ab9-4a78-9053-64d2d2c8c261")
+		(property "Reference" "J5"
+			(at 65.786 133.604 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Socket"
+			(at 57.15 136.144 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
+			(at 67.31 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 67.31 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50a526ae-5c1b-4189-ae03-13e72b172bab")
+		)
+		(pin "2"
+			(uuid "b3a31045-d2be-444a-b844-31a62e535604")
+		)
+		(instances
+			(project "gen3"
+				(path "/4fc99a72-ed0b-4d28-88d8-569af68d8cfc"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Wuerth_450301014042")
 		(at 161.29 39.37 270)
 		(unit 1)
@@ -7016,7 +7198,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm"
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
 			(at 151.13 39.37 0)
 			(effects
 				(font
@@ -7089,7 +7271,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
 			(at 72.39 173.99 0)
 			(effects
 				(font
