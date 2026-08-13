@@ -8,10 +8,10 @@ use embassy_time::Timer;
 
 /// Total number of bits to be sent to the shift register.
 const DATASIZE: usize = 16;
-/// Internal index representing the colon (:) on the display.
-const DIGIT_CORON: u8 = 10;
-/// Internal index representing an empty display (all segments off).
-const DIGIT_NONE: u8 = 11;
+/// Index representing an empty display cell (all segments off).
+pub const DIGIT_NONE: u8 = 10;
+/// Decimal-point segment bit within a digit's 8-bit pattern.
+const SEG_DP: u16 = 0x80;
 
 /// Represents the available colors for the signal indicator.
 #[derive(Clone, Copy)]
@@ -48,30 +48,38 @@ impl ShiftRegister {
         ShiftRegister { ser, rclk, srclk }
     }
 
-    /// Sends a 16-bit data packet to the shift register to update the display.
+    /// Sends a 16-bit data packet to the shift register to light one digit.
     ///
-    /// The data packet consists of:
-    /// - Digit selection bits
-    /// - Signal color bits
-    /// - 7-segment pattern bits
+    /// The display is multiplexed: this enables a single digit, drives its
+    /// segments, and refreshes the signal LED. Bit layout of the 16-bit word,
+    /// as wired on gen3 (U1 = high byte, U2 = low byte; `FJ5462AH`, common
+    /// cathode, all signals active-high):
     ///
+    /// ```text
+    /// bit : 15   14   13   12   11   10   9    8    7   6 5 4 3 2 1 0
+    /// use : DIG1 DIG2 DIG3 DIG4  --  Grn  Yel  Red  DP  g f e d c b a
     /// ```
-    ///                QH <---------- QA
-    /// register Left  :a,b,c,d,e,f,g,#,
-    /// register Right :                R,Y,G,4,3,2,1,DP
-    /// ```
+    ///
+    /// Digit index maps left-to-right: index 4 -> DIG1 (leftmost) ...
+    /// index 1 -> DIG4 (rightmost), hence the digit-enable bit is `digit + 11`.
     ///
     /// # Arguments
-    /// * `digit` - The target digit index (1-based or specific position).
-    /// * `num` - The number pattern index (0-9, or special characters).
+    /// * `digit` - The digit index, 1 (rightmost) to 4 (leftmost).
+    /// * `num` - The number pattern index (0-9, or [`DIGIT_NONE`]).
+    /// * `dp` - Whether to also light this digit's decimal point.
     /// * `rgb` - The color to be set for the signal indicator.
-    pub async fn data_send(&mut self, digit: u8, num: u8, rgb: SignalColor) {
-        let seg = [
+    pub async fn data_send(&mut self, digit: u8, num: u8, dp: bool, rgb: SignalColor) {
+        let seg: [u16; 11] = [
             0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, // 0 - 9
-            0x03, 0x00, // colon, none
+            0x00, // none
         ];
 
-        let data: u16 = (1 << (digit + 10)) | (1 << (rgb as u8 + 8)) | (seg[num as usize]);
+        let mut pattern = seg[num as usize];
+        if dp {
+            pattern |= SEG_DP;
+        }
+
+        let data: u16 = (1 << (digit + 11)) | (1 << (rgb as u8 + 8)) | pattern;
 
         self.rclk.set_low();
         for i in 0..DATASIZE {
@@ -85,13 +93,5 @@ impl ShiftRegister {
         }
         self.rclk.set_high();
         Timer::after_millis(1).await;
-    }
-
-    /// Specifically updates the colon (:) separator on the display.
-    ///
-    /// # Arguments
-    /// * `rgb` - The current signal color bits to maintain while updating the colon.
-    pub async fn coron_send(&mut self, rgb: SignalColor) {
-        self.data_send(5, DIGIT_CORON, rgb).await;
     }
 }
