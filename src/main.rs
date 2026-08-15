@@ -33,6 +33,15 @@ use panic_halt as _;
 use challenge::{CHALLENGES_NUM, Outcome, Wires};
 use display::{DIGIT_NONE, ShiftRegister, SignalColor};
 
+/// RP2350 boot image definition.
+///
+/// The RP2350 bootrom refuses to start a flashed image unless it finds a valid
+/// IMAGE_DEF block. This static fills the `.start_block` section reserved by
+/// `memory.x`; without it the board stays completely dead after flashing.
+#[used]
+#[unsafe(link_section = ".start_block")]
+static IMAGE_DEF: embassy_rp::block::ImageDef = embassy_rp::block::ImageDef::secure_exe();
+
 /// Represents the current global state shown on the display.
 struct TimerState {
     /// Remaining time in seconds.
