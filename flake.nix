@@ -31,6 +31,7 @@
           nativeBuildInputs = [
             toolchain
             pkgs.picotool
+            pkgs.cargo-make
           ];
         };
       }

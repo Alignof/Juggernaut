@@ -1,0 +1,89 @@
+# Task runner for the Juggernaut Gen3 firmware (RP2350 / Pico 2).
+#
+# Run inside `nix develop`, which provides the toolchain, picotool and
+# cargo-make. Common tasks:
+#
+#   cargo make build      # compile the firmware (debug)
+#   cargo make release    # compile the firmware (release)
+#   cargo make flash      # BOOTSEL: flash + run via picotool
+#                         #   (hold BOOTSEL while plugging in USB first)
+#   cargo make uf2        # produce a drag-and-drop UF2 image
+#   cargo make run        # flash + run via an SWD debug probe (probe-rs, defmt logs)
+#   cargo make info       # inspect the built image with picotool
+#   cargo make check      # rustfmt check + clippy
+
+[config]
+skip_core_tasks = true
+default_to_workspace = false
+
+[env]
+TARGET_TRIPLE = "thumbv8m.main-none-eabihf"
+BIN = "Juggernaut"
+# Path to the compiled ELF. Overridden by the release-flavoured tasks.
+ELF = "target/${TARGET_TRIPLE}/debug/${BIN}"
+UF2 = "target/${BIN}.uf2"
+
+[tasks.default]
+alias = "build"
+
+[tasks.build]
+description = "Compile the firmware (debug)."
+command = "cargo"
+args = ["build"]
+
+[tasks.release]
+description = "Compile the firmware (release)."
+command = "cargo"
+args = ["build", "--release"]
+
+[tasks.uf2]
+description = "Convert the built ELF into a UF2 image for drag-and-drop flashing."
+dependencies = ["build"]
+command = "picotool"
+args = ["uf2", "convert", "-t", "elf", "${ELF}", "${UF2}"]
+
+[tasks.flash]
+description = "Flash + run over USB with picotool (device must be in BOOTSEL mode)."
+dependencies = ["build"]
+command = "picotool"
+args = ["load", "-v", "-x", "-t", "elf", "${ELF}"]
+
+[tasks.flash-release]
+description = "Build release then flash + run over USB with picotool (BOOTSEL)."
+dependencies = ["release"]
+command = "picotool"
+args = ["load", "-v", "-x", "-t", "elf", "target/${TARGET_TRIPLE}/release/${BIN}"]
+
+[tasks.run]
+description = "Flash + run via an SWD debug probe (probe-rs), streaming defmt logs."
+command = "cargo"
+args = ["run"]
+
+[tasks.info]
+description = "Inspect the built image with picotool (image type, metadata)."
+dependencies = ["build"]
+command = "picotool"
+args = ["info", "-a", "-t", "elf", "${ELF}"]
+
+[tasks.fmt]
+description = "Format the source with rustfmt."
+command = "cargo"
+args = ["fmt"]
+
+[tasks.clippy]
+description = "Lint with clippy."
+command = "cargo"
+args = ["clippy"]
+
+[tasks.check]
+description = "Verify formatting and lint (used before committing)."
+dependencies = ["fmt-check", "clippy"]
+
+[tasks.fmt-check]
+command = "cargo"
+args = ["fmt", "--check"]
+
+[tasks.clean]
+description = "Remove build artifacts."
+command = "cargo"
+args = ["clean"]
